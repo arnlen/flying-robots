@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://arnlen.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://flying-robots.github.io
+title: Flying Robots
+subtitle: From Earth to space, with robots.
+author: Arnaud Lenglet
 simple_search: https://www.google.com/search
-description:
+description: My name is Arnaud Lenglet, I'm a space and robotics enthusiast. You'll find on this blog various projects around flying robots. Maybe you're wondering "Why flying robots?". You'll get a full answer <a href="/about">on this wonderful page</a>.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -64,13 +64,13 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: arnlen
+github_repo_count: 10
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: arnlen
 twitter_tweet_button: true
 
 # Google +1
@@ -79,7 +79,7 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
+googleplus_user: Arnaud Lenglet
 googleplus_hidden: false
 
 # Pinboard
@@ -91,7 +91,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: arnlen
 disqus_show_comment_count: false
 
 # Google Analytics

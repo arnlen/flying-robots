@@ -1,2 +1,13 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+ul {
+  list-style: circle inside;
+}
+
+.home-landing-profile-image {
+  max-height: 100px;
+  border-radius: 50px;
+  float: left;
+  margin: 5px 20px 10px 0px;
+}
