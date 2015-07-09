@@ -1,8 +1,17 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
-ul {
+h4 {
+  margin: 3rem;
+}
+
+ul, ol {
   list-style: circle inside;
+  margin: 3rem 0 3rem 3rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .home-landing-profile-image {
@@ -10,4 +19,28 @@ ul {
   border-radius: 50px;
   float: left;
   margin: 5px 20px 10px 0px;
+}
+
+.home-icon-container {
+
+  .balloon {
+
+  }
+
+  .zeppelin {
+
+  }
+
+  .plane {
+
+  }
+
+  .drone {
+
+  }
+
+  .rocket {
+
+  }
+
 }
