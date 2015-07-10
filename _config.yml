@@ -2,8 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://arnlen.github.io/flying-robots
-title: Flying Robots
+url: http://flying-robot-projects.net
+title: Flying Robot Projects
 subtitle: From Earth to space, with robots.
 author: Arnaud Lenglet
 simple_search: https://www.google.com/search
@@ -27,7 +27,7 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /flying-robots
+root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
