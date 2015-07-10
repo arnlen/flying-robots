@@ -6,7 +6,9 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1>{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+        <div class="meta">
+          written by {{ site.author }} {{ page.date }}
+        </div>
         {{ content }}
       </div>
     </div>

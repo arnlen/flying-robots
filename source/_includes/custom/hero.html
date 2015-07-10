@@ -1,9 +1,11 @@
 <h1>{{ site.title }}</h1>
 <p>{{ site.subtitle }}</p>
+
 <div class="home-icon-container">
-  <span class="balloon"></span>
-  <span class="zeppelin"></span>
-  <span class="plane"></span>
-  <span class="drone"></span>
-  <span class="rocket"></span>
+  {% for icon in page.icons %}
+    <span class="{{ icon }}">
+      <img src="/images/home/{{ icon }}_black_300x300.png">
+      <div class="white-background"></div>
+    </span>
+  {% endfor %}
 </div>

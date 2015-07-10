@@ -7,10 +7,9 @@ sharing: true
 footer: true
 ---
 
-## Why this website?
+<img class="home-landing-profile-image" src="/images/Arnaud Lenglet GitHub.jpeg">
 
-The idea behind this website is to help me achieve my long term goal: creating a flying rocket. Because it's a huge challenge, which would take a lot of time, I decided to create this blog in order to monitor my progress, to write down where I've managed to get, and to share my experiences.
-You can see this blog as a logbook and a motivational tool. :)
+Hi! My name is Arnaud Lenglet, I'm a space and robotics enthusiast. Developer for years, I like creating and hacking things. When it comes to robots - and especially space ones - I can becoming mad very fast! That's why I created this blog: to share my experiences on those fascinating topics. My not-so-secret long-term goal is to build a rocket.
 
 ## Why creating flying robots?
 
@@ -19,14 +18,21 @@ Two main reasons:
 1. Because we can.
 2. Because flying things are **waaaaaay** much fun and exciting than walking, rolling, crawling ones, right?
 
-The ultimate goal, of course, is to create a rocket.
+I'll start with relatively simple flying machines, but the ultimate goal, of course, is the rocket.
 Why a rocket ?
 Well...
 
 <blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Rocket lift off is definitely the coolest, most impressive and most exciting tech event to see on this planet! <a href="https://twitter.com/hashtag/space?src=hash">#space</a> <a href="http://t.co/q9fg58QhJt">pic.twitter.com/q9fg58QhJt</a></p>&mdash; Arnaud Lenglet (@arnlen) <a href="https://twitter.com/arnlen/status/618882520679997445">8 Juillet 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-(Yes, I know: to quote oneself is totally egocentric... hum... it's like a writing selfie)
+(Yes, I know: to quote oneself is totally egocentric... hum... it's like a written selfie)
+
+## Why this website?
+
+ The idea behind this website is to help me achieve my long term goal: creating a flying rocket. Because it's a huge challenge, which would take a lot of time, I decided to create this blog in order to monitor my progress, to write down where I've managed to get, and to share my experiences.
+You can see this blog as a logbook and a motivational tool. :)
+
+
 
 ## Who am I?
 
