@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-<img class="home-landing-profile-image" alt="Arnaud Lenglet" src="/images/Arnaud Lenglet GitHub.jpeg">
+<img class="about-profile-image" alt="Arnaud Lenglet" src="/images/Arnaud Lenglet GitHub.jpeg">
 
 Hi! My name is Arnaud Lenglet, I'm a space and robotics enthusiast. Developer for years, I like creating and hacking things. When it comes to robots - and especially space ones - I can become mad very fast! That's why I've created this blog: to share my experiences on those fascinating topics. My not-so-secret long-term goal is to build a rocket.
 
