@@ -3,7 +3,7 @@
 
 <div class="steps-icons-container">
   {% for step in page.steps %}
-    <span class="{{ step }}">
+    <span class="step {{ step }}">
       <img src="/images/home/{{ step }}_black_300x300.png">
       <div class="white-background"></div>
       <div class="hover-flag">
@@ -22,3 +22,5 @@
   <div class="drone description">{{ page.drone_description }}</div>
   <div class="rocket description">{{ page.rocket_description }}</div>
 </div>
+
+<div class="mask"></div>
