@@ -8,11 +8,13 @@ $(function() {
 
   $('.steps-icons-container').find('.step').mouseover(function() {
     $('.mask').addClass('active');
-    $(this).find('.hover-flag').addClass('visible');
+    $(this).find('.step-name-container').addClass('visible');
   });
   $('.steps-icons-container').find('.step').mouseout(function() {
+    $(this).find('.step-name-container').removeClass('visible');
+  });
+  $('.steps-icons-container').mouseout(function() {
     $('.mask').removeClass('active');
-    $(this).find('.hover-flag').removeClass('visible');
   });
 
   function homePageLoadingAnimation(array) {

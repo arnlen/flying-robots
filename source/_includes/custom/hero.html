@@ -6,21 +6,19 @@
     <span class="step {{ step }}">
       <img src="/images/home/{{ step }}_black_300x300.png">
       <div class="white-background"></div>
-      <div class="hover-flag">
+      <div class="step-name-container">
         <div class="line vertical"></div>
         <div class="line horizontal"></div>
-        <div class="step-name">{{ step | titlecase }}</div>
+        <div class="step-name">Step {{ forloop.index }}: {{ step | titlecase }}</div>
       </div>
     </span>
   {% endfor %}
 </div>
 
 <div class="step-descriptions-container">
-  <div class="balloon description">{{ page.balloon_description }}</div>
-  <div class="zeppelin description">{{ page.zeppelin_description }}</div>
-  <div class="plane description">{{ page.plane_description }}</div>
-  <div class="drone description">{{ page.drone_description }}</div>
-  <div class="rocket description">{{ page.rocket_description }}</div>
+  {% for description in page.step_descriptions %}
+    <div class="{{ page.steps[forloop.index0] }} description">{{ description }}</div>
+  {% endfor %}
 </div>
 
 <div class="mask"></div>
