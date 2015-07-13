@@ -4,6 +4,10 @@
 <div class="steps-icons-container">
   {% for step in page.steps %}
     <span class="step {{ step }}">
+      {% if forloop.index == page.current_step %}
+        <div class="current-step">Current project</div>
+        <div class="spinning-wheel"></div>
+      {% endif %}
       <img src="/images/home/{{ step }}_black_300x300.png">
       <div class="white-background"></div>
       <div class="step-name-container">

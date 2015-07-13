@@ -8,27 +8,10 @@ $(function() {
 
   $('.steps-icons-container').find('.step').mouseover(function() {
     $('.mask').addClass('active');
-    $(this).find('.step-name-container').addClass('visible');
-  });
-  $('.steps-icons-container').find('.step').mouseout(function() {
-    $(this).find('.step-name-container').removeClass('visible');
   });
   $('.steps-icons-container').mouseout(function() {
     $('.mask').removeClass('active');
   });
-
-  function homePageLoadingAnimation(array) {
-    if (array.length > 0) {
-      $('.steps-icons-container').find(array[0]).animate({
-        opacity: 1
-      }, animationTime, function() {
-        array.shift();
-        homePageLoadingAnimation(array);
-      });
-    }
-  }
-
-  homePageLoadingAnimation(homeIcones);
 
   // Sorry about the following code...
   // I know, it's a shame. I'll refactor this "quick & horrible dirty" thing soon...
