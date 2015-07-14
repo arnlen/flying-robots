@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "One year rocket project"
+title: "Earth to space in 5 projects: presentation"
 date: 2015-07-09 08:51:41 +0200
 comments: true
-categories: Projects Rocket
+categories: Balloon Zeppelin Plane Drone Rocket Project
 ---
 
-I'm thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within july 2016, which would be able to reach an altitude of 1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered.
+I'm thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within **july 2016**, which would be able to reach an altitude of **1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered**.
 
 <!--more-->
 
@@ -20,7 +20,7 @@ The idea is that each step is designed to lead to the next one, by adding new se
 The revised roadmap now includes 5 major steps:
 
 ---
-### Step 1: Balloon
+### Step 1: Balloon project
 
 #### Objectives
 1. Record altitude and acceleration during the whole flight
@@ -38,7 +38,7 @@ The revised roadmap now includes 5 major steps:
 - 4G antenna
 
 ---
-### Step 2: Zeppelin
+### Step 2: Zeppelin project
 
 #### Objectives
 1. Transmit orders from ground station to flying robot
@@ -57,7 +57,7 @@ The revised roadmap now includes 5 major steps:
 - Brushless motor
 
 ---
-### Step 3: Plane
+### Step 3: Plane project
 
 #### Objectives
 1. In flight live video streaming
@@ -75,7 +75,7 @@ The revised roadmap now includes 5 major steps:
 - Air speed sensor
 
 ---
-### Step 4: Drone
+### Step 4: Drone project
 
 #### Objectives
  1. Autopilot for vertical take off and landing
@@ -93,7 +93,7 @@ The revised roadmap now includes 5 major steps:
 - Humidity sensor
 
 ---
-### Step 5: Rocket
+### Step 5: Rocket project
 
 #### Objectives
  1. Achieve the altitude of 1 000 m
@@ -109,3 +109,7 @@ The revised roadmap now includes 5 major steps:
 - GPS
 - Parachutes
 - Propulsion
+
+---
+
+I'll explain each step in further posts.
