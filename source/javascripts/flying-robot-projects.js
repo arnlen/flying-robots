@@ -13,6 +13,13 @@ $(function() {
     $('.mask').removeClass('active');
   });
 
+  // Click to scroll
+  $('.step').on('click', function() {
+    $('html,body').animate({
+      scrollTop: $('.home-field').offset().top},
+      'slow');
+  });
+
   // Sorry about the following code...
   // I know, it's a shame. I'll refactor this "quick & horrible dirty" thing soon...
 
