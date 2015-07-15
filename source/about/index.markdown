@@ -9,6 +9,8 @@ footer: true
 
 <img class="about-profile-image" alt="Arnaud Lenglet" src="/images/Arnaud Lenglet GitHub.jpeg">
 
+Flying things are great. Robots are awesome. So flying robots must be AMAZING! That's why you'll find on this site all kind of flying robots projects. From balloons, to zappelin, through drones, planes and even rockets - all built with Arduino, Rasperry or other cool tools - let's build flying machines!
+
 Hi! My name is Arnaud Lenglet, I'm a space and robotics enthusiast. Developer for years, I like creating and hacking things. When it comes to robots - and especially space ones - I can become mad very fast! That's why I've created this blog: to share my experiences on those fascinating topics. My not-so-secret long-term goal is to build a rocket.
 
 
