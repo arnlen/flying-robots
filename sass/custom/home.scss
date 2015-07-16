@@ -28,6 +28,8 @@
     opacity: 0.4;
     cursor: pointer;
 
+    &.current-step { opacity: 1; }
+
     img {
       position: relative;
       z-index: 50;
@@ -78,11 +80,23 @@
           position: absolute;
           left: 0;
           bottom: 0;
+          z-index: 10;
           height: 10px;
           background-color: white;
         }
 
-        &.p0 { &:before { width: 0%; } }
+        &:after {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 0;
+          height: 10px;
+          width: 100%;
+          background-color: hsla(100, 0, 100%, 0.2);
+        }
+
+        &.p0 { &:before { width: 0; } }
         &.p10 { &:before { width: 10%; } }
         &.p20 { &:before { width: 20%; } }
         &.p30 { &:before { width: 30%; } }
@@ -109,7 +123,7 @@
         }
       }
 
-      transition: all 0.4s ease;
+      transition: top 0.4s ease, opacity 0.4s ease;
     }
 
     &:hover {
@@ -128,26 +142,6 @@
   }
 }
 
-.step-descriptions-container {
-  position: absolute;
-  width: 100%;
-
-  .description {
-    position: absolute;
-    z-index: 150;
-    left: 0;
-    right: 0;
-    top: 80px;
-    font-size: 2rem;
-    padding: 1rem;
-    opacity: 0;
-
-    transition: opacity 0.5s ease;
-
-    &.visible { opacity: 1; }
-  }
-}
-
 .mask {
   opacity: 0;
   position: absolute;
@@ -158,8 +152,13 @@
   bottom: 0;
   background-color: black;
   pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-  transition: all 0.6s ease;
+  transition: opacity 0.6s ease;
+
+  .text { margin: 20px 0; }
 }
 
 .spinning-wheel {
@@ -172,7 +171,7 @@
   left: -20%;
 }
 
-.current-step {
+.current-project {
   position: absolute;
   top: -70%;
   left: 0;
@@ -194,7 +193,7 @@
 
 .steps-icons-container {
   .balloon {
-    animation: blink 0.6s linear infinite alternate;
+    // animation: blink 0.6s linear infinite alternate;
 
     &:hover { animation: none; }
   }
@@ -203,4 +202,4 @@
 .spinning-wheel { animation: spin 5s linear infinite; }
 
 // @keyframes blink { from { opacity: 0.6; } to { opacity: 1; }  }
-// @keyframes spin { from { transform: rotateZ(0deg); } to { transform: rotateZ(360deg); }  }
+@keyframes spin { from { transform: rotateZ(0deg); } to { transform: rotateZ(360deg); }  }
