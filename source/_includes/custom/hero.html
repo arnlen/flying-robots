@@ -14,16 +14,16 @@
         <div class="white-background"></div>
         <div class="step-name-container">
           <div class="line vertical"></div>
-          <div class="status">{{ design_status[forloop.index0] }}</div>
-          <div class="status">{{ electronic_status[forloop.index0] }}</div>
-          <div class="status">{{ mecanic_status[forloop.index0] }}</div>
-          <div class="status">{{ realisation_status[forloop.index0] }}</div>
+          <div class="status p{{ page.steps_status[forloop.index0] }}">
+            Progression: {{ page.steps_status[forloop.index0] }}%
           </div>
           <div class="step-name">Step {{ forloop.index }}: {{ step | titlecase }}</div>
         </div>
       </span>
     {% endfor %}
   </div>
+
+  {{ page.steps_status }}
 
   <div class="step-descriptions-container">
     {% for description in page.step_descriptions %}
