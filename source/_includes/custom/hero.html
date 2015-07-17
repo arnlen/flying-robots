@@ -3,9 +3,7 @@
   <p>{{ site.subtitle }}</p>
 
   <div class="steps-icons-container">
-    <div class="mask">
-      <div class="text">Click to scroll</div>
-    </div>
+    <div class="mask"></div>
     {% for step in page.steps %}
       <span class="step {{ step }} {% if forloop.index == page.current_step %}current-step{% endif %}">
         {% if forloop.index == page.current_step %}
@@ -24,5 +22,8 @@
       </span>
     {% endfor %}
   </div>
+</div>
 
+<div class="scroll">
+  <img src="/images/scroll-down.png">
 </div>
