@@ -219,7 +219,7 @@
   &:hover { animation: none; }
 }
 
-// .spinning-wheel { animation: spin 5s linear infinite; }
+.spinning-wheel { animation: spin 5s linear infinite; }
 .scroll { animation: spot-then-fade 2s linear infinite; }
 
 @keyframes spin { from { transform: rotateZ(0deg); } to { transform: rotateZ(360deg); } }
@@ -235,7 +235,8 @@
 
 .home-page {
 
-  .hero-section {
+  .hero-content {
+    margin: 0 10px;
   }
 }
 
@@ -243,7 +244,7 @@
 
   .step {
     width: 20%;
-    margin: 60px 20px 0;
+    margin: 60px 15px 0;
 
     &.current-step { }
 
@@ -254,6 +255,7 @@
     }
 
     .step-name-container {
+      left: 20%;
 
       .step-name {
       }
@@ -292,6 +294,7 @@
     &:hover {
 
       .step-name-container {
+        top: 60%;
       }
     }
   }
