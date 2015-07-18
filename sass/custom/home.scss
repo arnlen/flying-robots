@@ -231,64 +231,22 @@
 // PHONE
 //
 
-// Landscape
+// iPhone 4: portrait (320 x 480)
+// iPhone 5: portrait (320 x 568)
 
-@media all and (max-height: 600px) {
+@media all and (max-width: 350px) and (max-height: 600px) {
   .home-page {
-    width: auto;
-    height: auto;
 
     .hero-content { margin: 0 10px; }
-    .hero-section { height: 550px; }
-  }
-
-  .steps-icons-container {
-    .step {
-      margin: 100px 25px 0;
-
-      &:hover {
-        .step-name-container { top: 90%; }
-      }
+    .hero-section {
+      align-items: flex-start;
     }
-  }
-
-  .mask { height: 550px; }
-
-  .scroll {
-    display: none;
-    animation: none;
-  }
-}
-
-// Portrait
-
-@media all and (max-width: 700px) {
-  .steps-icons-container {
-    .step { margin: 60px 15px 0; }
-  }
-}
-
-@media all and (max-width: 500px) {
-  .home-page {
-    .hero-content { margin: 0 10px; }
   }
 
   .steps-icons-container {
     .step {
       width: 20%;
       margin: 60px 15px 0;
-
-      &:hover {
-        .step-name-container { top: 60%; }
-      }
-    }
-  }
-}
-
-@media all and (max-width: 350px) {
-  .steps-icons-container {
-    .step {
-      margin: 40px 15px;
 
       .step-name-container {
         .step-name { font-size: 1.1rem; }
@@ -300,3 +258,131 @@
     }
   }
 }
+
+// iPhone 4: landscape (480 x 320)
+// iPhone 5: landscape (568 x 320)
+
+@media all and (max-width: 600px) and (max-height: 350px) {
+  .home-page {
+    width: auto;
+    height: auto;
+
+    .hero-content { margin: 0 10px; }
+    .hero-section {
+      height: 600px;
+    }
+  }
+
+  .steps-icons-container {
+    .step {
+      width: 15%;
+      margin: 65px 25px 0;
+
+      .step-name-container {
+        .step-name { font-size: 1.1rem; }
+      }
+
+      &:hover {
+        .step-name-container { top: 75%; }
+      }
+    }
+  }
+
+  .mask { height: 600px; }
+
+  .scroll {
+    display: none;
+    animation: none;
+  }
+}
+
+// @media all and (max-width: 500px) {
+//   .home-page {
+//     .hero-content { margin: 0 10px; }
+//   }
+
+//   .steps-icons-container {
+//     .step {
+//       width: 20%;
+//       margin: 60px 15px 0;
+
+//       &:hover {
+//         .step-name-container { top: 60%; }
+//       }
+//     }
+//   }
+// }
+
+// // Galaxy S4 portrait (360 x 640)
+// // iPhone 6 portrait (375 x 667)
+// // iPhone 6 plus (414 x 736)
+
+// @media all and (max-height: 540px) {
+//   .home-page {
+//     width: auto;
+//     height: auto;
+
+//     .hero-content { margin: 0 10px; }
+//     .hero-section {
+//       height: 550px;
+//     }
+//   }
+
+//   .steps-icons-container {
+//     .step {
+//       margin: 100px 25px 0;
+
+//       &:hover {
+//         .step-name-container { top: 90%; }
+//       }
+//     }
+//   }
+
+//   .mask { height: 550px; }
+
+//   .scroll {
+//     display: none;
+//     animation: none;
+//   }
+// }
+
+// // Portrait
+
+// @media all and (max-width: 700px) {
+//   .steps-icons-container {
+//     .step { margin: 60px 15px 0; }
+//   }
+// }
+
+// @media all and (max-width: 500px) {
+//   .home-page {
+//     .hero-content { margin: 0 10px; }
+//   }
+
+//   .steps-icons-container {
+//     .step {
+//       width: 20%;
+//       margin: 60px 15px 0;
+
+//       &:hover {
+//         .step-name-container { top: 60%; }
+//       }
+//     }
+//   }
+// }
+
+// @media all and (max-width: 350px) {
+//   .steps-icons-container {
+//     .step {
+//       margin: 40px 15px;
+
+//       .step-name-container {
+//         .step-name { font-size: 1.1rem; }
+//       }
+
+//       &:hover {
+//         .step-name-container { top: 75%; }
+//       }
+//     }
+//   }
+// }
