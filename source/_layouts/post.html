@@ -11,8 +11,14 @@ single: true
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
+
+        <a href="/" class="home-icon">
+          <img src="/images/home.png"/>
+        </a>
+
         <div class="meta">
           written by {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+          <br>
           {% include post/categories.html %}
         </div>
         {{ content }}

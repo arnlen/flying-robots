@@ -11,6 +11,8 @@ layout: default
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="meta">
+          <a href="/">Home</a> > {{ page.title }}
+          <br>
           written by {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         </div>
         {{ content }}

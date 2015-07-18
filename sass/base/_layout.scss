@@ -104,22 +104,17 @@ article {
 }
 
 .home-icon {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 44px;
-  height: 44px;
-  z-index: 700;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  padding: 6px;
   background-color: #333332;
   text-align: center;
-  border: 0;
+  float: left;
+  cursor: pointer;
+  opacity: 0.5;
 
-  img {
-    border: none;
-    width: 25px;
-    height: 25px;
-    margin-top: 9px;
-  }
+  &:hover { opacity: 1; }
 }
 
 .social-icon-list a {
