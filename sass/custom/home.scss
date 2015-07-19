@@ -296,6 +296,75 @@
   }
 }
 
+// iPhone 4: portrait (320 x 480)
+// iPhone 5: portrait (320 x 568)
+
+@media all and (max-width: 350px) and (max-height: 600px) {
+  .home-page {
+
+    .hero-content { margin: 0 10px; }
+    .hero-section {
+      align-items: flex-start;
+    }
+  }
+
+  .steps-icons-container {
+    .step {
+      width: 20%;
+      margin: 60px 15px 0;
+
+      .step-name-container {
+        .step-name { font-size: 1.1rem; }
+      }
+
+      &:hover {
+        .step-name-container { top: 75%; }
+      }
+    }
+  }
+}
+
+// Galaxy S4 portrait (360 x 640)
+// iPhone 6 portrait (375 x 667)
+// iPhone 6 plus (414 x 736)
+
+@media all and (max-width: 430px) and (max-height: 750px) {
+  .home-page {
+    .hero-content { margin: 0 10px; }
+  }
+
+  .steps-icons-container {
+    margin: 50px 20px 0;
+
+    .step {
+      width: 19%;
+      margin: 60px 20px 0;
+
+      .step-name-container {
+        .step-name { font-size: 1.1rem; }
+      }
+
+      &:hover {
+        .step-name-container { top: 70%; }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // @media all and (max-width: 500px) {
 //   .home-page {
 //     .hero-content { margin: 0 10px; }
@@ -313,9 +382,9 @@
 //   }
 // }
 
-// // Galaxy S4 portrait (360 x 640)
-// // iPhone 6 portrait (375 x 667)
-// // iPhone 6 plus (414 x 736)
+// Galaxy S4 portrait (360 x 640)
+// iPhone 6 portrait (375 x 667)
+// iPhone 6 plus (414 x 736)
 
 // @media all and (max-height: 540px) {
 //   .home-page {
