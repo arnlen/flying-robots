@@ -96,7 +96,7 @@ disqus_short_name: flyingrobotprojects
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-51676408-2
 
 # Facebook Like
 facebook_like: false
