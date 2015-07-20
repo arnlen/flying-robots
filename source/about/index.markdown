@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Welcome to the Flying Robot Projects blog!"
+title: "About this blog"
 date: 2015-07-08 22:28
 comments: true
 sharing: true
