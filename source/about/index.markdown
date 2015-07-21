@@ -7,26 +7,26 @@ sharing: true
 footer: true
 ---
 
-<img class="about-profile-image" alt="Arnaud Lenglet" src="/images/Arnaud Lenglet GitHub.jpeg">
+<img class="about-profile-image" alt="Arnaud Lenglet - Robotics and space enthusiast" src="/images/Arnaud Lenglet GitHub.jpeg">
 
-Flying things are great. Robots are awesome. So flying robots must be AMAZING! That's why you'll find on this site all kind of flying robots projects. From balloons, to zappelin, through drones, planes and even rockets - all built with Arduino, Rasperry or other cool tools - let's build flying machines!
+Hi! So you want to know more about this blog? Glad to ear that! This blog was created in 2015. Its first purpose is to help me to shape one of my dreams: **the creation my own autonomous rocket**.
 
-Hi! My name is Arnaud Lenglet, I'm a space and robotics enthusiast. Developer for years, I like creating and hacking things. When it comes to robots - and especially space ones - I can become mad very fast! That's why I've created this blog: to share my experiences on those fascinating topics. My not-so-secret long-term goal is to build a rocket.
+Because it's a huge challenge, which would take a lot of time and efforts, I decided to monitor my progress, writing down here where I've managed to get, and to share my experiences. You can see this blog as a logbook and a motivational tool. :)
+
+<p class="image-container">
+  <img class="logbook-image" alt="Logbook image" src="/images/Pilot_logbooks_600x399.jpg">
+</p>
 
 
 ## Why creating flying robots?
 
-Two main reasons:
-
-1. Because we can.
-2. Because flying things are **waaaaaay** much fun and exciting than walking, rolling, crawling ones, right?
-
-I'll start with relatively simple flying machines, but the ultimate goal, of course, is the rocket.
+Flying things are great, right? And robots are awesome. So flying robots must be - of course - amazing! Pure logic.
+Another reason? Because flying things are **waaaaaay** much fun and exciting than walking, rolling, crawling ones. And where is excitement, is the power to move mountains!
 
 
 ## Why a rocket ?
 
-Well, as a well known and pretty cool guy once said:
+As a well known and pretty cool guy once said:
 
 <div class="twitter-card-container">
   <blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Rocket lift off is definitely the coolest, most impressive and most exciting tech event to see on this planet! <a href="https://twitter.com/hashtag/space?src=hash">#space</a> <a href="http://t.co/q9fg58QhJt">pic.twitter.com/q9fg58QhJt</a></p>&mdash; Arnaud Lenglet (@arnlen) <a href="https://twitter.com/arnlen/status/618882520679997445">8 Juillet 2015</a></blockquote>
@@ -38,24 +38,15 @@ Well, as a well known and pretty cool guy once said:
 (Yes, I know: to quote oneself is totally egocentric...)
 
 
-## Why this website?
-
- The idea behind this website is to help me achieve my long term goal: creating a flying rocket. Because it's a huge challenge, which would take a lot of time, I decided to create this blog in order to monitor my progress, to write down where I've managed to get, and to share my experiences.
-You can see this blog as a logbook and a motivational tool. :)
-
-
 ## More about me
 
-I live in France, near Paris. I quitted in 2015 the employee status to embrace the freelancer one.
-Since then, I really enjoy the time I get to realise my dreams!
+I live in France, near Paris. I quitted in 2015 the employee status to embrace the freelancer one. Since then, I really enjoy the time I get to realise my dreams!
 
-Entrepreneur at heart, I love creating things, learning stuff, participate to innovating and exciting projects, and sharing great talks and experiences with other *not-so-crazy* passionate guys.
+Developer for years, entrepreneur at heart, I love creating and hacking things, learning stuff, participate to innovating and exciting projects, and sharing great talks and experiences with other *not-so-crazy* passionate guys.
+When it comes to robots - and especially space ones - I can become mad very fast!
 
-**When I code**: I search solutions, I take my head into my hands, I cry and I laugh, and I go to bed after a success (or not...).
+Oh! And I have a robotic dog. His name is Aciou.
 
-**When I don't write code**: I go to meetups in Paris, I tinker my Rasbperry Pi and fiddle my Arduino, I prepare my next talk, or I play Kerbal Space Program.
-
-On the weekend, I switch my code lines with the fireman uniform.
-
-One day, I'll travel through the stars with a robot as my assistant. On this day: I'll have to write a blog post about this.
-That's also why I've started this blog.
+<p class="image-container">
+  <img class="aciou-image" alt="Here is Aciou, my boy! A nice robot Sony Aibo ERS-7" src="/images/Aciou-Robot-Sony-Aibo-ERS-7.jpg">
+</p>

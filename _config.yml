@@ -7,8 +7,7 @@ title: Flying Robot Projects
 subtitle: From Earth to space with robots, in 5 not-so-easy projects.
 author: Arnaud Lenglet
 simple_search: https://www.google.com/search
-description: "My name is Arnaud Lenglet, I'm a space and robotics enthusiast. Developer for years, I like creating and hacking things. This blog is dedicated to the accomplishment of one of my dreams: the creation my own autonomous rocket. I'll share my progress through the following posts!"
-about_me: My name is Arnaud Lenglet, I'm a space and robotics enthusiast. You'll find on this blog various projects around flying robots. Maybe you're wondering "Why flying robots?". You'll get a full answer <a href="/about">on this wonderful page</a>.
+description: "My name is Arnaud Lenglet, I'm a space and robotics enthusiast. This blog is dedicated to the creation my own autonomous rocket. You can follow my progress through the posts bellow, or read more about this blog and I <a href='/about'>on this about page</a>. Enjoy!"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
