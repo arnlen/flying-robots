@@ -10,6 +10,8 @@ The balloon project is the first step to go to space. This project will lead to 
 
 <!--more-->
 
+As described in [this original post](/blog/2015/07/09/one-year-rocket-project/), here are the key points of the balloon project:
+
 #### Objectives
 1. Record altitude and acceleration during the whole flight
 2. Transmit those data in flight
@@ -24,3 +26,15 @@ The balloon project is the first step to go to space. This project will lead to 
 - Altimeter
 - Accelerometer
 - 4G antenna
+
+---
+
+I don't want to reinvent the wheel with this project. That's why I'll try to **mimic** real balloon systems as much as possible.
+
+| | |
+| ----------------------- | ----------------------- |
+| <img src="/images/2015/07/hot-air-balloon-diagram.jpg"> | <img src="/images/2015/07/balloon_techparts.JPG"> |
+| <img src="/images/2015/07/balloon-gas.jpg"> | <img src="/images/2015/07/hot-air-balloon-3.jpg"> |
+
+The only real difference between my balloon and real once would be the pilot: my balloon would be **autonomous** and **remote monitored**.
+The idea is to really have, even at this first step, a real **flying robot**.
