@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "balloon-propulsion-design"
+title: "Balloon: propulsion system design"
 date: 2015-07-25 23:48:43 +0200
 comments: true
 categories: Balloon Project
