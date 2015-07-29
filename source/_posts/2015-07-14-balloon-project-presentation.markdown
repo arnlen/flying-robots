@@ -4,6 +4,7 @@ title: "Balloon project: presentation"
 date: 2015-07-14 12:50:19 +0200
 comments: true
 categories: Balloon Project
+keywords: balloon robots robotics
 ---
 
 The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.

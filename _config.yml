@@ -4,10 +4,11 @@
 
 url: http://flying-robot-projects.net
 title: Flying Robot Projects
-subtitle: From Earth to space with robots, in 5 not-so-easy projects.
+subtitle: From Earth to space with 5 autonomous flying robots.
 author: Arnaud Lenglet
 simple_search: https://www.google.com/search
 description: "My name is Arnaud Lenglet, I'm a space and robotics enthusiast. This blog is dedicated to the creation my own autonomous rocket. You can follow my progress through the posts bellow, or read more about this blog and I <a href='/about'>on this about page</a>. Enjoy!"
+seo_description: "Flying Robot Projects | From Earth to space with 5 autonomous flying robots: balloon, zeppelin, plane, drone and rocket. I'm Arnaud Lenglet and you can follow my progress here!"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
