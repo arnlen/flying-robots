@@ -3,7 +3,7 @@ layout: post
 title: "Balloon project: presentation"
 date: 2015-07-14 12:50:19 +0200
 comments: true
-categories: Balloon Project
+categories: Balloon
 keywords: balloon robots robotics
 thumbnail: /images/2015/07/balloon-gas.jpg
 ---

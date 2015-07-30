@@ -3,7 +3,7 @@ layout: post
 title: "Earth to space in 5 projects: presentation"
 date: 2015-07-09 08:51:41 +0200
 comments: true
-categories: Balloon Zeppelin Plane Drone Rocket Project
+categories: Balloon Zeppelin Plane Drone Rocket
 keywords: balloon zeppelin plane drone rocket robots robotics
 thumbnail: /images/2015/07/Flying_Robots_One_Year_Rocket_Project_Roadmap_by_Arnaud_Lenglet.jpg
 ---

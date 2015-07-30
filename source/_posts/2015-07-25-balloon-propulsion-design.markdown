@@ -3,7 +3,7 @@ layout: post
 title: "Balloon: propulsion system design"
 date: 2015-07-25 23:48:43 +0200
 comments: true
-categories: Balloon Project
+categories: Balloon
 keywords: balloon robots robotics propulsion
 thumbnail: /images/2015/07/Robot_Balloon_Propulsion_System_v2.jpg
 ---
