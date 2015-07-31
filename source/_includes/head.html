@@ -7,8 +7,17 @@
   <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }} | {{ site.subtitle }}</title>
   <meta name="author" content="{{ site.author }}">
 
-  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.seo_description }}{% endif %}{% endcapture %}
-  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+  {% capture description %}
+    {% if page.description %}
+      {{ page.description }}
+    {% elsif excerpted == 'true' %}
+      {{ page.excerpt }}
+    {% else %}
+      {{ site.seo_description }}
+    {% endif %}
+  {% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:160 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
   <!-- http://t.co/dKP3o1e -->
@@ -45,4 +54,5 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+
 </head>
