@@ -3,8 +3,8 @@ layout: post
 title: "Developing the Mission Control Center software"
 date: 2015-08-07 22:33:20 +0200
 comments: true
-categories: API Development Backend
-keywords: api ruby rails robots robotics
+categories: Balloon Zeppelin Plane Drone Rocket
+keywords: api development ruby rails emberjs robots robotics
 thumbnail: /images/2015/08/Main-Control-Room-ESA-Space-Operations-Centre.jpg
 ---
 
@@ -39,7 +39,7 @@ This is the good thing with iterations: each iteration helps to determine the ne
 
 It's so exciting! On this first "balloon" iteration, I'm discovering so many things right now! It's amazing!
 
-Here are a few details of the Mission Control Center I'm actually developing, and what will be under the hood:
+Here are a few details of the Mission Control Center software I'm actually developing, and what will be under the hood:
 
 - **An API** developed in Ruby on Rails. This part would do all the core business jobs.
 - **A frontend** developed in EmberJS. This would be the monitor part, from which I would be able to interact with the flying robot.
