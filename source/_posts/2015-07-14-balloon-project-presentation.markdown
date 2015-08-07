@@ -35,7 +35,7 @@ I don't want to reinvent the wheel with this project. That's why I'll try to **m
 
 | | |
 | ----------------------- | ----------------------- |
-| <img src="/images/2015/07/hot-air-balloon-diagram.jpg"> | <img src="/images/2015/07/balloon_techparts.JPG"> |
+| <img src="/images/2015/07/hot-air-balloon-diagram.jpg"> | <img src="/images/2015/07/balloon-techparts.JPG"> |
 | <img src="/images/2015/07/balloon-gas.jpg"> | <img src="/images/2015/07/hot-air-balloon-3.jpg"> |
 
 The only real difference between my balloon and real once would be the pilot: my balloon would be **autonomous** and **remote monitored**.

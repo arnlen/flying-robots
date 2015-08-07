@@ -14,7 +14,7 @@ Hi! So you want to know more about this blog? Glad to ear that! This blog was cr
 Because it's a huge challenge, which would take a lot of time and efforts, I decided to monitor my progress, writing down here where I've managed to get, and to share my experiences. You can see this blog as a logbook and a motivational tool. :)
 
 <p class="image-container">
-  <img class="logbook-image" alt="Logbook image" src="/images/Pilot_logbooks_600x399.jpg">
+  <img class="logbook-image" alt="Logbook image" src="/images/Pilot-logbooks-600x399.jpg">
 </p>
 
 
@@ -32,7 +32,7 @@ As a well known and pretty cool guy once said:
   <blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Rocket lift off is definitely the coolest, most impressive and most exciting tech event to see on this planet! <a href="https://twitter.com/hashtag/space?src=hash">#space</a> <a href="http://t.co/q9fg58QhJt">pic.twitter.com/q9fg58QhJt</a></p>&mdash; Arnaud Lenglet (@arnlen) <a href="https://twitter.com/arnlen/status/618882520679997445">8 Juillet 2015</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <img src="/images/meme/true_story.png">
+  <img src="/images/meme/true-story.png">
 </div>
 
 (Yes, I know: to quote oneself is totally egocentric...)

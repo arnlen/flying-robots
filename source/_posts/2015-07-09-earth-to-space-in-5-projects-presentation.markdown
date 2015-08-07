@@ -5,7 +5,7 @@ date: 2015-07-09 08:51:41 +0200
 comments: true
 categories: Balloon Zeppelin Plane Drone Rocket
 keywords: balloon zeppelin plane drone rocket robots robotics
-thumbnail: /images/2015/07/Flying_Robots_One_Year_Rocket_Project_Roadmap_by_Arnaud_Lenglet.jpg
+thumbnail: /images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg
 ---
 
 I'm thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within **july 2016**, which would be able to reach an altitude of **1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered**.
@@ -16,7 +16,9 @@ I know this goal involved huge difficulties. That's why I decided to split it in
 
 Here is the first roadmap which involved 4 steps:
 
-<img src="/images/2015/07/Flying_Robots_One_Year_Rocket_Project_Roadmap_by_Arnaud_Lenglet.jpg">
+<p class="image center">
+  <img src="/images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg">
+</p>
 
 The idea is that each step is designed to lead to the next one, by adding new sensors and systems to the stack.
 The revised roadmap now includes 5 major steps:

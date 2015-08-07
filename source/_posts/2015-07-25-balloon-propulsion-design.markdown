@@ -5,7 +5,7 @@ date: 2015-07-25 23:48:43 +0200
 comments: true
 categories: Balloon
 keywords: balloon robots robotics propulsion
-thumbnail: /images/2015/07/Robot_Balloon_Propulsion_System_v2.jpg
+thumbnail: /images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg
 ---
 
 I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.
@@ -16,7 +16,7 @@ I've so started few draws you'll find in this post.
 First, here is the whole picture of my balloon:
 
 <p class="image center">
-  <img src="/images/2015/07/Robot_Balloon_whole_design_v1.jpg">
+  <img src="/images/2015/07/Robot-Balloon-whole-design-v1.jpg">
 </p>
 
 I'll use temperature sensors at various positions to take decision:
@@ -33,7 +33,7 @@ At the propulsion level, I'll copy real balloon systems:
 The first design of the propulsion pipeline was this one:
 
 <p class="image center">
-  <img src="/images/2015/07/Robot_Balloon_Propulsion_System_v1.jpg">
+  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v1.jpg">
 </p>
 
 The gas tank is my **propane tank**. I'll use **electric valves** to open and cut the gas flow. The **control chamber** is a transition section that I'll use to monitor the situation and take decisions. If the temperature or pressure increases too much in this section, the on board system will be able to cut the flow, and evacuate the gas immediately.
@@ -44,7 +44,7 @@ The flashback problem is a serious one, and I don't want to take any risk on thi
 That's why I've chosen not to build a protection by myself, but to use a commercial solution : **flashback arrestors**.
 
 <p class="image center">
-  <img src="/images/2015/07/Torch_Flashback_Arrestor.jpg">
+  <img src="/images/2015/07/Torch-Flashback-Arrestor.jpg">
 </p>
 
 It's about 10€ on Ebay, and with 2 of them, I'll be safe.
@@ -56,7 +56,7 @@ Here is the new design with few improvments:
 - a temperature sensor inside the combustion chamber (if I find a way to protect it in order to prevent it from burning...)
 
 <p class="image center">
-  <img src="/images/2015/07/Robot_Balloon_Propulsion_System_v2.jpg">
+  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg">
 </p>
 
 The basic idea remains the same, but the implementation is a bit safer.
