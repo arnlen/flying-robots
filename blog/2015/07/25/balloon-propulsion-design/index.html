@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Balloon: Propulsion System Design - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
+  <meta name="author" content="Arnaud Lenglet">
+
+  
+  
+  <meta name="description" content="I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my &hellip;">
+  <meta name="keywords" content="balloon robots robotics propulsion">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Flying Robot Projects" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/flying-robot-projects.js" type="text/javascript"></script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-51676408-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+  <body>
+    <div class="page-header-banner">
+  <h1>Balloon: propulsion system design</h1>
+</div>
+
+<article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <a href="/" class="home-icon">
+          <img src="/images/home.png"/>
+        </a>
+
+        <div class="meta">
+          written by Arnaud Lenglet 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-07-25T23:48:43+02:00" pubdate data-updated="true"></time>
+          <br>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/balloon/'>balloon</a>
+  
+</span>
+
+
+        </div>
+        <p>I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.
+I&rsquo;ve so started few draws you&rsquo;ll find in this post.</p>
+
+<!-- more -->
+
+
+<p>First, here is the whole picture of my balloon:</p>
+
+<p class="image center">
+  <img src="/images/2015/07/Robot-Balloon-whole-design-v1.jpg">
+</p>
+
+
+<p>I&rsquo;ll use temperature sensors at various positions to take decision:</p>
+
+<ul>
+<li>activate the burners or stop them</li>
+<li>take off or land (with action on the motorized pulley)</li>
+<li>engage emergency procedure</li>
+</ul>
+
+
+<p>At the propulsion level, I&rsquo;ll copy real balloon systems:</p>
+
+<ul>
+<li>2 burners</li>
+<li>2 fuel tank (propane gas)</li>
+</ul>
+
+
+<p>The first design of the propulsion pipeline was this one:</p>
+
+<p class="image center">
+  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v1.jpg">
+</p>
+
+
+<p>The gas tank is my <strong>propane tank</strong>. I&rsquo;ll use <strong>electric valves</strong> to open and cut the gas flow. The <strong>control chamber</strong> is a transition section that I&rsquo;ll use to monitor the situation and take decisions. If the temperature or pressure increases too much in this section, the on board system will be able to cut the flow, and evacuate the gas immediately.
+I finally use a <strong>spark plug</strong> to initiate the reaction in the combustion chamber, and send burning gas to the burner.</p>
+
+<p>It was a relatively simple system, and to be honest, a too simple one. This design contains a serious risk of <strong>flashback</strong>, even if I count on electric valves to cut to gas flow in case of emergency.
+The flashback problem is a serious one, and I don&rsquo;t want to take any risk on this point.
+That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to use a commercial solution : <strong>flashback arrestors</strong>.</p>
+
+<p class="image center">
+  <img src="/images/2015/07/Torch-Flashback-Arrestor.jpg">
+</p>
+
+
+<p>It&rsquo;s about 10€ on Ebay, and with 2 of them, I&rsquo;ll be safe.</p>
+
+<p>Here is the new design with few improvments:</p>
+
+<ul>
+<li>flashback arrestors between sections</li>
+<li>more distance between the buffer chamber and the combustion chamber</li>
+<li>a temperature sensor inside the combustion chamber (if I find a way to protect it in order to prevent it from burning&hellip;)</li>
+</ul>
+
+
+<p class="image center">
+  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg">
+</p>
+
+
+<p>The basic idea remains the same, but the implementation is a bit safer.</p>
+
+<p>Next step: <strong>real life proof of concept</strong>!</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/07/14/balloon-project-presentation/" title="Previous Post: Balloon project: presentation">&laquo; Previous: Balloon project: presentation</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2015/07/30/telemetry-streaming-system-tss-design/" title="Next Post: Telemetry Streaming System (TSS): design">Next: Telemetry Streaming System (TSS): design &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a></h4>
+</div>
+
+
+<div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+  <a href="/about"><h4>About this blog</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/arnlen"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/arnlen"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+
+    
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'flyingrobotprojects';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/';
+        var disqus_url = 'http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>

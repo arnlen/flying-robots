@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Telemetry Streaming System (TSS): Design - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
+  <meta name="author" content="Arnaud Lenglet">
+
+  
+  
+  <meta name="description" content="While parts of my propulsion system are still in coming, I decide to come back to my first focus: the Telemetry Streaming System (TSS).
+The goal of this &hellip;">
+  <meta name="keywords" content="balloon robots robotics api ruby rails">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Flying Robot Projects" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/flying-robot-projects.js" type="text/javascript"></script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-51676408-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+  <body>
+    <div class="page-header-banner">
+  <h1>Telemetry Streaming System (TSS): design</h1>
+</div>
+
+<article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <a href="/" class="home-icon">
+          <img src="/images/home.png"/>
+        </a>
+
+        <div class="meta">
+          written by Arnaud Lenglet 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-07-30T22:56:55+02:00" pubdate data-updated="true"></time>
+          <br>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/balloon/'>balloon</a>
+  
+</span>
+
+
+        </div>
+        <p>While parts of my <a href="/blog/2015/07/25/balloon-propulsion-design/">propulsion system</a> are still in coming, I decide to come back to my first focus: the Telemetry Streaming System (TSS).
+The goal of this system is to <strong>transfer in flight data</strong> (altitude, pressure, horizontal and vertical speed, engine temperature,&hellip;) <strong>to the ground station</strong> for monitoring purpose.</p>
+
+<!-- more -->
+
+
+<p>After reading a bit on this topic, I&rsquo;ve chosen a quite atypical solution.
+Whereas trying to transfer data directly from my balloon/zeppelin/plane/drone/rocket (choose your favourite one) to the ground station, I&rsquo;ll use a pretty well known solution in the web world: <strong>an API</strong>.</p>
+
+<p>The telephone antenna network in my region is dense enough to provide me with a <strong>&ldquo;king size&rdquo;</strong> ground relay station network, enable me to establish Internet connection from almost everywhere. At the Apollo time, this network would have been large enough to make NASA&rsquo;s engineers jealous! :)</p>
+
+<p>Here is the plan in one schema:</p>
+
+<p class="image center">
+  <img src="/images/2015/07/Telemetry-Streaming-System-Design-for-Flying-Robots.jpg">
+</p>
+
+
+<p>A bit of explanation:</p>
+
+<ul>
+<li>First, the flying robot first tries to reach Internet <strong>through 4G connection</strong></li>
+<li>When connected, it will send telemetry data to my backend server <strong>via an API</strong></li>
+<li>Then, when new data will arrive on my backend server, they are immediately <strong>persisted in database</strong>, and simultaneously a <strong>notification</strong> is sent to my ground base station</li>
+<li>Finally, on notification, the flight monitor dashboard <strong>updates values</strong></li>
+</ul>
+
+
+<p class="image center">
+  <img src="/images/2015/07/Telemetry-Streaming-System-Design-Flight-Monitor.jpg">
+</p>
+
+
+<p><strong>Important</strong>: I won&rsquo;t be able to pilot my flying machine through the TSS. This system is a read-only one.</p>
+
+<p>For my fellow developer, here are few technical precisions:</p>
+
+<ul>
+<li>The backend API is developed in Ruby on Rails (sorry for my Django lover guys ^^)</li>
+<li>I&rsquo;ll use a websocket connection for notifications</li>
+</ul>
+
+
+<p>I will open source all source code, and you can find repositories on the <a target="_blank" href="https://github.com/flying-robot-projects">GitHub organization page</a> (you can drop a star or two if you&rsquo;re in a good mood. Thx! &lt;3)</p>
+
+<p class="image center">
+  <a target="_blank" href="https://github.com/flying-robot-projects"><img src="/images/2015/07/Flying-Robot-Projects-Github-Source-Code.png"></a>
+</p>
+
+
+<p>Back the my TSS, I can see two main advantages with this design:</p>
+
+<ul>
+<li>First, I can monitor my flying robot from <strong>all around the world</strong>, and with <strong>any device</strong> able to Internet connection</li>
+<li>Second, I don&rsquo;t have to mind with home-made transmission systems: <strong>I rely on battle-tested ones</strong></li>
+</ul>
+
+
+<p>Nevertheless, I still have two interrogations:</p>
+
+<ul>
+<li>What is the maximum altitude coverage of 4G antenna? (guessing: 2km, if you know, comments are appreciated!)</li>
+<li>Is is possible to maintain connections at high speed? This wouldn&rsquo;t be a problem with my balloon project, but it will be with my plane, and especially with my rocket one.</li>
+</ul>
+
+
+<p>I won&rsquo;t be able to clarify those questions before first launches, and I&rsquo;m ok with that: this won&rsquo;t be critical&hellip; promise.</p>
+
+<p class="image center">
+  <img src="/images/2015/07/Developer-first-test-fail-cute-girl.gif">
+</p>
+
+
+<p>One step at a time, &ldquo;the morrow will be anxious for itself&rdquo;.
+This idea isn&rsquo;t to build the best and perfect system from the first strike. Experience proves we can&rsquo;t.</p>
+
+<p>I will build something that works well for my daily situation, and tomorrow will be another (exciting and innovating) day! :)</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/07/25/balloon-propulsion-design/" title="Previous Post: Balloon: propulsion system design">&laquo; Previous: Balloon: propulsion system design</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2015/08/07/developing-the-mission-control-center-software/" title="Next Post: Developing the Mission Control Center software">Next: Developing the Mission Control Center software &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="pull-right">
+  <h4>Powered by <a href="http://octopress.org/">Octopress</a></h4>
+</div>
+
+
+<div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+  <a href="/about"><h4>About this blog</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/arnlen"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/arnlen"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+
+    
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'flyingrobotprojects';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design/';
+        var disqus_url = 'http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>

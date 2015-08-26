@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://flying-robot-projects.net/sitemap.xml 

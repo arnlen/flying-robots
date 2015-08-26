@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Flying Robot Projects]]></title>
+  <link href="http://flying-robot-projects.net/atom.xml" rel="self"/>
+  <link href="http://flying-robot-projects.net/"/>
+  <updated>2015-08-26T13:49:23+02:00</updated>
+  <id>http://flying-robot-projects.net/</id>
+  <author>
+    <name><![CDATA[Arnaud Lenglet]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Developing the Mission Control Center Software]]></title>
+    <link href="http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software/"/>
+    <updated>2015-08-07T22:33:20+02:00</updated>
+    <id>http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software</id>
+    <content type="html"><![CDATA[<p>While working on the <a href="http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
+From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
+
+<p>In fact, space agencies call this the <strong>Mission Control Center</strong>.</p>
+
+<!-- more -->
+
+
+
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/08/Main-Control-Room-ESA-Space-Operations-Centre.jpg" alt="The European Space Agency (ESA) Space Operations Centre">
+</p>
+
+
+<p>In my case, I won&rsquo;t have to build a huge high-tech room, and filling it up with shiny computers and smart guys.
+Rather that, what I precisely need is a software capable of:</p>
+
+<ol>
+<li>Monitor the robot (balloon, zeppelin, plane, drone of rocket) on the launch pad</li>
+<li>Supervise and run the launch sequence through its successive stages until lift-off</li>
+<li>Monitor the flying robot during the accomplishment of its in flight missions</li>
+<li>Receive and send data from and to the flying machine</li>
+<li>Localize the robot once landed</li>
+</ol>
+
+
+<p>Because this Mission Control Center is not precisely part of my future rocket, I neglected it until now&hellip; whereas it&rsquo;s definitely a requirement for every flight!
+How did I missed it?!</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/08/sheldon-cooper.gif" alt="Sheldon Cooper says no">
+</p>
+
+
+<p>This is the good thing with iterations: each iteration helps to determine the next one.</p>
+
+<p>It&rsquo;s so exciting! On this first &ldquo;balloon&rdquo; iteration, I&rsquo;m discovering so many things right now! It&rsquo;s amazing!</p>
+
+<p>Here are a few details of the Mission Control Center software I&rsquo;m actually developing, and what will be under the hood:</p>
+
+<ul>
+<li><strong>An API</strong> developed in Ruby on Rails. This part would do all the core business jobs.</li>
+<li><strong>A frontend</strong> developed in EmberJS. This would be the monitor part, from which I would be able to interact with the flying robot.</li>
+</ul>
+
+
+<p>You can follow the progress of both of these projects on the <a target="_blank" href="https://github.com/flying-robot-projects">GitHub page of the Flying Robot Project organization</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Telemetry Streaming System (TSS): Design]]></title>
+    <link href="http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design/"/>
+    <updated>2015-07-30T22:56:55+02:00</updated>
+    <id>http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design</id>
+    <content type="html"><![CDATA[<p>While parts of my <a href="http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/">propulsion system</a> are still in coming, I decide to come back to my first focus: the Telemetry Streaming System (TSS).
+The goal of this system is to <strong>transfer in flight data</strong> (altitude, pressure, horizontal and vertical speed, engine temperature,&hellip;) <strong>to the ground station</strong> for monitoring purpose.</p>
+
+<!-- more -->
+
+
+<p>After reading a bit on this topic, I&rsquo;ve chosen a quite atypical solution.
+Whereas trying to transfer data directly from my balloon/zeppelin/plane/drone/rocket (choose your favourite one) to the ground station, I&rsquo;ll use a pretty well known solution in the web world: <strong>an API</strong>.</p>
+
+<p>The telephone antenna network in my region is dense enough to provide me with a <strong>&ldquo;king size&rdquo;</strong> ground relay station network, enable me to establish Internet connection from almost everywhere. At the Apollo time, this network would have been large enough to make NASA&rsquo;s engineers jealous! :)</p>
+
+<p>Here is the plan in one schema:</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Telemetry-Streaming-System-Design-for-Flying-Robots.jpg">
+</p>
+
+
+<p>A bit of explanation:</p>
+
+<ul>
+<li>First, the flying robot first tries to reach Internet <strong>through 4G connection</strong></li>
+<li>When connected, it will send telemetry data to my backend server <strong>via an API</strong></li>
+<li>Then, when new data will arrive on my backend server, they are immediately <strong>persisted in database</strong>, and simultaneously a <strong>notification</strong> is sent to my ground base station</li>
+<li>Finally, on notification, the flight monitor dashboard <strong>updates values</strong></li>
+</ul>
+
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Telemetry-Streaming-System-Design-Flight-Monitor.jpg">
+</p>
+
+
+<p><strong>Important</strong>: I won&rsquo;t be able to pilot my flying machine through the TSS. This system is a read-only one.</p>
+
+<p>For my fellow developer, here are few technical precisions:</p>
+
+<ul>
+<li>The backend API is developed in Ruby on Rails (sorry for my Django lover guys ^^)</li>
+<li>I&rsquo;ll use a websocket connection for notifications</li>
+</ul>
+
+
+<p>I will open source all source code, and you can find repositories on the <a target="_blank" href="https://github.com/flying-robot-projects">GitHub organization page</a> (you can drop a star or two if you&rsquo;re in a good mood. Thx! &lt;3)</p>
+
+<p class="image center">
+  <a target="_blank" href="https://github.com/flying-robot-projects"><img src="http://flying-robot-projects.net/images/2015/07/Flying-Robot-Projects-Github-Source-Code.png"></a>
+</p>
+
+
+<p>Back the my TSS, I can see two main advantages with this design:</p>
+
+<ul>
+<li>First, I can monitor my flying robot from <strong>all around the world</strong>, and with <strong>any device</strong> able to Internet connection</li>
+<li>Second, I don&rsquo;t have to mind with home-made transmission systems: <strong>I rely on battle-tested ones</strong></li>
+</ul>
+
+
+<p>Nevertheless, I still have two interrogations:</p>
+
+<ul>
+<li>What is the maximum altitude coverage of 4G antenna? (guessing: 2km, if you know, comments are appreciated!)</li>
+<li>Is is possible to maintain connections at high speed? This wouldn&rsquo;t be a problem with my balloon project, but it will be with my plane, and especially with my rocket one.</li>
+</ul>
+
+
+<p>I won&rsquo;t be able to clarify those questions before first launches, and I&rsquo;m ok with that: this won&rsquo;t be critical&hellip; promise.</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Developer-first-test-fail-cute-girl.gif">
+</p>
+
+
+<p>One step at a time, &ldquo;the morrow will be anxious for itself&rdquo;.
+This idea isn&rsquo;t to build the best and perfect system from the first strike. Experience proves we can&rsquo;t.</p>
+
+<p>I will build something that works well for my daily situation, and tomorrow will be another (exciting and innovating) day! :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Balloon: Propulsion System Design]]></title>
+    <link href="http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/"/>
+    <updated>2015-07-25T23:48:43+02:00</updated>
+    <id>http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design</id>
+    <content type="html"><![CDATA[<p>I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.
+I&rsquo;ve so started few draws you&rsquo;ll find in this post.</p>
+
+<!-- more -->
+
+
+<p>First, here is the whole picture of my balloon:</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Robot-Balloon-whole-design-v1.jpg">
+</p>
+
+
+<p>I&rsquo;ll use temperature sensors at various positions to take decision:</p>
+
+<ul>
+<li>activate the burners or stop them</li>
+<li>take off or land (with action on the motorized pulley)</li>
+<li>engage emergency procedure</li>
+</ul>
+
+
+<p>At the propulsion level, I&rsquo;ll copy real balloon systems:</p>
+
+<ul>
+<li>2 burners</li>
+<li>2 fuel tank (propane gas)</li>
+</ul>
+
+
+<p>The first design of the propulsion pipeline was this one:</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Robot-Balloon-Propulsion-System-v1.jpg">
+</p>
+
+
+<p>The gas tank is my <strong>propane tank</strong>. I&rsquo;ll use <strong>electric valves</strong> to open and cut the gas flow. The <strong>control chamber</strong> is a transition section that I&rsquo;ll use to monitor the situation and take decisions. If the temperature or pressure increases too much in this section, the on board system will be able to cut the flow, and evacuate the gas immediately.
+I finally use a <strong>spark plug</strong> to initiate the reaction in the combustion chamber, and send burning gas to the burner.</p>
+
+<p>It was a relatively simple system, and to be honest, a too simple one. This design contains a serious risk of <strong>flashback</strong>, even if I count on electric valves to cut to gas flow in case of emergency.
+The flashback problem is a serious one, and I don&rsquo;t want to take any risk on this point.
+That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to use a commercial solution : <strong>flashback arrestors</strong>.</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Torch-Flashback-Arrestor.jpg">
+</p>
+
+
+<p>It&rsquo;s about 10€ on Ebay, and with 2 of them, I&rsquo;ll be safe.</p>
+
+<p>Here is the new design with few improvments:</p>
+
+<ul>
+<li>flashback arrestors between sections</li>
+<li>more distance between the buffer chamber and the combustion chamber</li>
+<li>a temperature sensor inside the combustion chamber (if I find a way to protect it in order to prevent it from burning&hellip;)</li>
+</ul>
+
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg">
+</p>
+
+
+<p>The basic idea remains the same, but the implementation is a bit safer.</p>
+
+<p>Next step: <strong>real life proof of concept</strong>!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Balloon Project: Presentation]]></title>
+    <link href="http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation/"/>
+    <updated>2015-07-14T12:50:19+02:00</updated>
+    <id>http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation</id>
+    <content type="html"><![CDATA[<p>The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.</p>
+
+<!--more-->
+
+
+<p>As described in <a href="http://flying-robot-projects.net/blog/2015/07/09/one-year-rocket-project/">this original post</a>, here are the key points of the balloon project:</p>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Record altitude and acceleration during the whole flight</li>
+<li>Transmit those data in flight</li>
+<li>Auto lift off, reach to target altitude, and soft landing</li>
+</ol>
+
+
+<h4>New systems involved</h4>
+
+<ul>
+<li>Master Chief System (MCS): coordinator systems during flight</li>
+<li>Sensor Management System (SMS): capture and record various data from sensors</li>
+<li>Telemetry Streaming System (TSS): stream data to ground station (via 4G connexion)</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>Altimeter</li>
+<li>Accelerometer</li>
+<li>4G antenna</li>
+</ul>
+
+
+<hr />
+
+<p>I don&rsquo;t want to reinvent the wheel with this project. That&rsquo;s why I&rsquo;ll try to <strong>mimic</strong> real balloon systems as much as possible.</p>
+
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <img src="http://flying-robot-projects.net/images/2015/07/hot-air-balloon-diagram.jpg"> </td>
+<td> <img src="http://flying-robot-projects.net/images/2015/07/balloon-techparts.JPG"> </td>
+</tr>
+<tr>
+<td> <img src="http://flying-robot-projects.net/images/2015/07/balloon-gas.jpg"> </td>
+<td> <img src="http://flying-robot-projects.net/images/2015/07/hot-air-balloon-3.jpg"> </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The only real difference between my balloon and real once would be the pilot: my balloon would be <strong>autonomous</strong> and <strong>remote monitored</strong>.
+The idea is to really have, even at this first step, a real <strong>flying robot</strong>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Earth to Space in 5 Projects: Presentation]]></title>
+    <link href="http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
+    <updated>2015-07-09T08:51:41+02:00</updated>
+    <id>http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within <strong>july 2016</strong>, which would be able to reach an altitude of <strong>1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered</strong>.</p>
+
+<!--more-->
+
+
+<p>I know this goal involved huge difficulties. That&rsquo;s why I decided to split it into multiple steps.</p>
+
+<p>Here is the first roadmap which involved 4 steps:</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg">
+</p>
+
+
+<p>The idea is that each step is designed to lead to the next one, by adding new sensors and systems to the stack.
+The revised roadmap now includes 5 major steps:</p>
+
+<hr />
+
+<h3>Step 1: Balloon project</h3>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Record altitude and acceleration during the whole flight</li>
+<li>Transmit those data in flight</li>
+<li>Auto lift off, reach to target altitude, and soft landing</li>
+</ol>
+
+
+<h4>New systems involved</h4>
+
+<ul>
+<li>Master Chief System (MCS): coordinator systems during flight</li>
+<li>Sensor Management System (SMS): capture and record various data from sensors</li>
+<li>Telemetry Streaming System (TSS): stream data to ground station (via 4G connexion)</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>Altimeter</li>
+<li>Accelerometer</li>
+<li>4G antenna</li>
+</ul>
+
+
+<hr />
+
+<h3>Step 2: Zeppelin project</h3>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Transmit orders from ground station to flying robot</li>
+<li>Manage to navigate in straight line and achieve multiple turns</li>
+<li>Manage to maintain direction an altitude</li>
+</ol>
+
+
+<h4>New systems involved</h4>
+
+<ul>
+<li>Remote guidance system (RGS): get orders from base station</li>
+<li>Position &amp; Navigation System (PNS): manage position, horizontal/vertical speed, altitude, roll, yaw and pitch</li>
+<li>Energy &amp; Propulsion System (EPS): manage battery, fuel and engines</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>Gyroscope</li>
+<li>Compass</li>
+<li>Servo-motor</li>
+<li>Brushless motor</li>
+</ul>
+
+
+<hr />
+
+<h3>Step 3: Plane project</h3>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>In flight live video streaming</li>
+<li>Follow flight plan with multiple way points</li>
+<li>High speed auto lift off, and soft landing</li>
+</ol>
+
+
+<h4>New systems involved</h4>
+
+<ul>
+<li>Take off and landing System (TLS): manage take off and landing</li>
+<li>Flight Plan System (FPS): manage flight plan with multiple way points</li>
+<li>Video Streaming System (VSS): stream video to ground station (via 4G connexion)</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>Video camera</li>
+<li>Ultrasonic sensors</li>
+<li>Air speed sensor</li>
+</ul>
+
+
+<hr />
+
+<h3>Step 4: Drone project</h3>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Autopilot for vertical take off and landing</li>
+<li>Mobile app communication</li>
+<li>Abort flight in case of emergency</li>
+</ol>
+
+
+<h4>Systems involved</h4>
+
+<ul>
+<li>[NEW] Emergency &amp; Abort System (EAS): trigger abort system in case of emergency</li>
+<li>[UPDATE] Take off and landing System (TLS): manage take off and landing</li>
+<li>[UPDATE] Position &amp; Navigation System (PNS): manage position, horizontal/vertical speed, altitude, roll, yaw and pitch</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>Temperature sensor</li>
+<li>Air pressure sensor</li>
+<li>Humidity sensor</li>
+</ul>
+
+
+<hr />
+
+<h3>Step 5: Rocket project</h3>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Achieve the altitude of 1 000 m</li>
+<li>Take a picture of the launch pad at apoapsis</li>
+<li>Deploy parachutes to land softly</li>
+</ol>
+
+
+<h4>New systems involved</h4>
+
+<ul>
+<li>[NEW] Location &amp; Recovery System (LRS): allow to recover rocket after landing or crash</li>
+<li>[NEW] Atmospheric &amp; Meteorological System (AMS): monitor atmospheric condition and send decision order based on ground meteo station data and on board sensor data</li>
+<li>[UPDATE] Energy &amp; Propulsion System (EPS): manage battery, fuel and engines</li>
+</ul>
+
+
+<h4>New on board tools (in comparison to previous step)</h4>
+
+<ul>
+<li>GPS</li>
+<li>Parachutes</li>
+<li>Propulsion</li>
+</ul>
+
+
+<hr />
+
+<p>I&rsquo;ll explain each step in further posts.</p>
+]]></content>
+  </entry>
+  
+</feed>
