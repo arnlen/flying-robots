@@ -60,6 +60,11 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # post_asides:
 # page_asides:
 
+# Jekyll Multiple Languages plugin
+# Doc: https://github.com/screeninteraction/jekyll-multiple-languages-plugin
+languages: ["en", "fr"]
+exclude_from_localizations: ["javascript", "images", "css"]
+
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
