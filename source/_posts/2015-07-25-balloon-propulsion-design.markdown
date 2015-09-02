@@ -6,6 +6,7 @@ comments: true
 categories: Balloon
 keywords: balloon robots robotics propulsion
 thumbnail: /images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg
+lang: en
 ---
 
 I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.

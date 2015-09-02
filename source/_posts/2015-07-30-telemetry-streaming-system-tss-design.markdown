@@ -6,6 +6,7 @@ comments: true
 categories: Balloon
 keywords: balloon robots robotics api ruby rails
 thumbnail: /images/2015/07/Telemetry-Streaming-System-Design-for-Flying-Robots.jpg
+lang: en
 ---
 
 While parts of my [propulsion system](/blog/2015/07/25/balloon-propulsion-design/) are still in coming, I decide to come back to my first focus: the Telemetry Streaming System (TSS).

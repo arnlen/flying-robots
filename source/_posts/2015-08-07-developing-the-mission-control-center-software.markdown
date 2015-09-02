@@ -6,6 +6,7 @@ comments: true
 categories: Balloon Zeppelin Plane Drone Rocket
 keywords: api development ruby rails emberjs robots robotics
 thumbnail: /images/2015/08/Main-Control-Room-ESA-Space-Operations-Centre.jpg
+lang: en
 ---
 
 While working on the [Telemetry Streaming System (TSS)](/blog/2015/07/30/telemetry-streaming-system-tss-design), I realised I was in need of something more. I don't only need a software to receive and store telemetry data ; but I need a more global system, which would allow me **to monitor the whole flight**.

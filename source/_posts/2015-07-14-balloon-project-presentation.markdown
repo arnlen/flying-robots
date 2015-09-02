@@ -6,6 +6,7 @@ comments: true
 categories: Balloon
 keywords: balloon robots robotics
 thumbnail: /images/2015/07/balloon-gas.jpg
+lang: en
 ---
 
 The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.
