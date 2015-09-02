@@ -28,7 +28,7 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:lang/:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
@@ -59,6 +59,11 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # blog_index_asides:
 # post_asides:
 # page_asides:
+
+# i18n
+# Plugin: https://github.com/octopress/multilingual
+lang: en
+
 
 # ----------------------- #
 #   3rd Party Settings    #
