@@ -1,1 +1,10 @@
-title: English title
+home:
+  hero:
+    subtitle: "From Earth to space with 5 autonomous flying robots."
+    current-step: "Current project"
+    step: "Step"
+  article-list:
+    header: "Robotic projects news"
+    subtitle: "Designs, crash tests, successes, failures and more"
+  archive-link:
+    see-all-posts: "See all posts"

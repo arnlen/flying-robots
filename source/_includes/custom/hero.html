@@ -1,13 +1,15 @@
 <div class="hero-content">
   <h1>{{ site.title }}</h1>
-  <p>{{ site.subtitle }}</p>
+  <p>{{ lang.home.hero.subtitle }}</p>
 
   <div class="steps-icons-container">
     <div class="mask"></div>
     {% for step in page.steps %}
       <span class="step {{ step }} {% if forloop.index == page.current_step %}current-step{% endif %}">
         {% if forloop.index == page.current_step %}
-          <div class="current-project">Current project</div>
+          <div class="current-project">
+            {{ lang.home.hero.current-step }}
+          </div>
           <div class="spinning-wheel"></div>
         {% endif %}
         <img src="/images/home/{{ step }}-black-300x300.png">
@@ -17,7 +19,7 @@
           <div class="status p{{ page.steps_status[forloop.index0] }}">
             Progression: {{ page.steps_status[forloop.index0] }}%
           </div>
-          <div class="step-name">Step {{ forloop.index }}: {{ step | titlecase }}</div>
+          <div class="step-name">{{ lang.home.hero.step }} {{ forloop.index }}: {{ step | titlecase }}</div>
         </div>
       </span>
     {% endfor %}

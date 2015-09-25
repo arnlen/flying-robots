@@ -1,1 +1,10 @@
-title: Titre français
+home:
+  hero:
+    subtitle: "De la Terre à l'espace, en 5 projets de robots volants autonomes."
+    current-step: "Projet en cours"
+    step: "Étape"
+  article-list:
+    header: "Les news des projets robotiques"
+    subtitle: "Conception, crash tests, réussites, échecs et autres réjouissances."
+  archive-link:
+    see-all-posts: "Voir toutes les publications"
