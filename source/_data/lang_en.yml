@@ -11,3 +11,8 @@ home:
     subtitle: "Designs, crash tests, successes, failures and more"
   archive-link:
     see-all-posts: "See all posts"
+footer:
+  links:
+    home: "Home"
+    about: "About this blog"
+  end-footer: "Developped with <3 by me, powered by <a href='http://octopress.org/'>Octopress</a>"

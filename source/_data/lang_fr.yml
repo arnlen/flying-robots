@@ -11,3 +11,8 @@ home:
     subtitle: "Conception, crash tests, réussites, échecs et autres réjouissances."
   archive-link:
     see-all-posts: "Voir toutes les publications"
+footer:
+  links:
+    home: "Accueil"
+    about: "A propos"
+  end-footer: "Développé avec <3 par mes soins, propulsé par <a href='http://octopress.org/'>Octopress</a>"
