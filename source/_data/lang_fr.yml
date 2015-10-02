@@ -9,6 +9,9 @@ home:
   article-list:
     header: "Les news des projets robotiques"
     subtitle: "Conception, crash tests, réussites, échecs et autres réjouissances."
+    written: "publié"
+    in: "dans"
+    excerpt_link: "Lire la suite &rarr;"
   archive-link:
     see-all-posts: "Voir toutes les publications"
 footer:

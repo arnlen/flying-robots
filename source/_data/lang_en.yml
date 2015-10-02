@@ -9,6 +9,9 @@ home:
   article-list:
     header: "Robotic projects news"
     subtitle: "Designs, crash tests, successes, failures and more"
+    written: "written"
+    in: "in"
+    excerpt_link: "Read on &rarr;"
   archive-link:
     see-all-posts: "See all posts"
 footer:
