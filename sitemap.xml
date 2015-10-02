@@ -1,48 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software/</loc>
+    <loc>http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/</loc>
     <lastmod>2015-08-07T22:33:20+02:00</lastmod>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design/</loc>
+    <loc>http://flying-robot-projects.net/en/2015/07/30/telemetry-streaming-system-tss-design/</loc>
     <lastmod>2015-07-30T22:56:55+02:00</lastmod>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/</loc>
+    <loc>http://flying-robot-projects.net/en/2015/07/25/balloon-propulsion-design/</loc>
     <lastmod>2015-07-25T23:48:43+02:00</lastmod>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation/</loc>
+    <loc>http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation/</loc>
     <lastmod>2015-07-14T12:50:19+02:00</lastmod>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation/</loc>
+    <loc>http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation/</loc>
     <lastmod>2015-07-09T08:51:41+02:00</lastmod>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/</loc>
+    <loc>http://flying-robot-projects.net/fr/2015/07/09/de-la-terre-a-l-espace-en-5-projets-robotiques-presentation/</loc>
+    <lastmod>2015-07-09T08:51:41+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/posts/en/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/fr/</loc>
   </url>
   <url>
     <loc>http://flying-robot-projects.net/blog/archives/</loc>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/posts/</loc>
+    <loc>http://flying-robot-projects.net/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/posts/fr/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/en/</loc>
   </url>
   <url>
     <loc>http://flying-robot-projects.net/about/</loc>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/categories/balloon/</loc>
+    <loc>http://flying-robot-projects.net/blog/categories/montgolfiere/</loc>
   </url>
   <url>
     <loc>http://flying-robot-projects.net/blog/categories/zeppelin/</loc>
   </url>
   <url>
-    <loc>http://flying-robot-projects.net/blog/categories/plane/</loc>
+    <loc>http://flying-robot-projects.net/blog/categories/avion/</loc>
   </url>
   <url>
     <loc>http://flying-robot-projects.net/blog/categories/drone/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/blog/categories/fusee/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/blog/categories/balloon/</loc>
+  </url>
+  <url>
+    <loc>http://flying-robot-projects.net/blog/categories/plane/</loc>
   </url>
   <url>
     <loc>http://flying-robot-projects.net/blog/categories/rocket/</loc>

@@ -9,13 +9,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Balloon: Propulsion System Design - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
+  <title>Balloon project: presentation - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
   <meta name="author" content="Arnaud Lenglet">
 
   
   
-  <meta name="description" content="I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my &hellip;">
-  <meta name="keywords" content="balloon robots robotics propulsion">
+  <meta name="description" content=" The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket. ">
+  <meta name="keywords" content="balloon robots robotics">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design">
+  <link rel="canonical" href="http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Flying Robot Projects" type="application/atom+xml">
@@ -66,7 +66,7 @@
 </head>
   <body>
     <div class="page-header-banner">
-  <h1>Balloon: propulsion system design</h1>
+  <h1>Balloon project: presentation</h1>
 </div>
 
 <article role="article" class="full-single-article">
@@ -74,11 +74,14 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
 
-        <a href="/" class="home-icon">
+        <a href="/en" class="home-icon">
           <img src="/images/home.png"/>
         </a>
 
         <div class="meta">
+          <span class="language-selector">
+            
+          </span>
           written by Arnaud Lenglet 
 
 
@@ -92,7 +95,7 @@
 
 
 
-<time datetime="2015-07-25T23:48:43+02:00" pubdate data-updated="true"></time>
+<time datetime="2015-07-14T12:50:19+02:00" pubdate data-updated="true"></time>
           <br>
           
 
@@ -105,74 +108,66 @@ in
 
 
         </div>
-        <p>I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.
-I&rsquo;ve so started few draws you&rsquo;ll find in this post.</p>
+        <p>The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.</p>
 
-<!-- more -->
-
-
-<p>First, here is the whole picture of my balloon:</p>
-
-<p class="image center">
-  <img src="/images/2015/07/Robot-Balloon-whole-design-v1.jpg">
-</p>
+<!--more-->
 
 
-<p>I&rsquo;ll use temperature sensors at various positions to take decision:</p>
+<p>As described in <a href="/blog/2015/07/09/one-year-rocket-project/">this original post</a>, here are the key points of the balloon project:</p>
+
+<h4>Objectives</h4>
+
+<ol>
+<li>Record altitude and acceleration during the whole flight</li>
+<li>Transmit those data in flight</li>
+<li>Auto lift off, reach to target altitude, and soft landing</li>
+</ol>
+
+
+<h4>New systems involved</h4>
 
 <ul>
-<li>activate the burners or stop them</li>
-<li>take off or land (with action on the motorized pulley)</li>
-<li>engage emergency procedure</li>
+<li>Master Chief System (MCS): coordinator systems during flight</li>
+<li>Sensor Management System (SMS): capture and record various data from sensors</li>
+<li>Telemetry Streaming System (TSS): stream data to ground station (via 4G connexion)</li>
 </ul>
 
 
-<p>At the propulsion level, I&rsquo;ll copy real balloon systems:</p>
+<h4>New on board tools (in comparison to previous step)</h4>
 
 <ul>
-<li>2 burners</li>
-<li>2 fuel tank (propane gas)</li>
+<li>Altimeter</li>
+<li>Accelerometer</li>
+<li>4G antenna</li>
 </ul>
 
 
-<p>The first design of the propulsion pipeline was this one:</p>
+<hr />
 
-<p class="image center">
-  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v1.jpg">
-</p>
+<p>I don&rsquo;t want to reinvent the wheel with this project. That&rsquo;s why I&rsquo;ll try to <strong>mimic</strong> real balloon systems as much as possible.</p>
 
-
-<p>The gas tank is my <strong>propane tank</strong>. I&rsquo;ll use <strong>electric valves</strong> to open and cut the gas flow. The <strong>control chamber</strong> is a transition section that I&rsquo;ll use to monitor the situation and take decisions. If the temperature or pressure increases too much in this section, the on board system will be able to cut the flow, and evacuate the gas immediately.
-I finally use a <strong>spark plug</strong> to initiate the reaction in the combustion chamber, and send burning gas to the burner.</p>
-
-<p>It was a relatively simple system, and to be honest, a too simple one. This design contains a serious risk of <strong>flashback</strong>, even if I count on electric valves to cut to gas flow in case of emergency.
-The flashback problem is a serious one, and I don&rsquo;t want to take any risk on this point.
-That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to use a commercial solution : <strong>flashback arrestors</strong>.</p>
-
-<p class="image center">
-  <img src="/images/2015/07/Torch-Flashback-Arrestor.jpg">
-</p>
-
-
-<p>It&rsquo;s about 10€ on Ebay, and with 2 of them, I&rsquo;ll be safe.</p>
-
-<p>Here is the new design with few improvments:</p>
-
-<ul>
-<li>flashback arrestors between sections</li>
-<li>more distance between the buffer chamber and the combustion chamber</li>
-<li>a temperature sensor inside the combustion chamber (if I find a way to protect it in order to prevent it from burning&hellip;)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <img src="/images/2015/07/hot-air-balloon-diagram.jpg"> </td>
+<td> <img src="/images/2015/07/balloon-techparts.JPG"> </td>
+</tr>
+<tr>
+<td> <img src="/images/2015/07/balloon-gas.jpg"> </td>
+<td> <img src="/images/2015/07/hot-air-balloon-3.jpg"> </td>
+</tr>
+</tbody>
+</table>
 
 
-<p class="image center">
-  <img src="/images/2015/07/Robot-Balloon-Propulsion-System-v2.jpg">
-</p>
-
-
-<p>The basic idea remains the same, but the implementation is a bit safer.</p>
-
-<p>Next step: <strong>real life proof of concept</strong>!</p>
+<p>The only real difference between my balloon and real once would be the pilot: my balloon would be <strong>autonomous</strong> and <strong>remote monitored</strong>.
+The idea is to really have, even at this first step, a real <strong>flying robot</strong>.</p>
 
 
         <hr class="divider-short"/>
@@ -196,11 +191,11 @@ That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to u
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2015/07/14/balloon-project-presentation/" title="Previous Post: Balloon project: presentation">&laquo; Previous: Balloon project: presentation</a>
+          <a class="pull-left" href="/en/2015/07/25/balloon-propulsion-design/" title="Previous Post: Balloon: propulsion system design">&laquo; Previous: Balloon: propulsion system design</a>
         
 
         
-          <a class="pull-right" href="/blog/2015/07/30/telemetry-streaming-system-tss-design/" title="Next Post: Telemetry Streaming System (TSS): design">Next: Telemetry Streaming System (TSS): design &raquo;</a>
+          <a class="pull-right" href="/en/2015/07/09/earth-to-space-in-5-projects-presentation/" title="Next Post: Earth to space in 5 projects: presentation">Next: Earth to space in 5 projects: presentation &raquo;</a>
         
       </div>
     </div>
@@ -211,7 +206,7 @@ That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to u
   <div class="container">
     <div class="row">
       <div class="pull-right">
-  <h4>Powered by <a href="http://octopress.org/">Octopress</a></h4>
+  <h4>Developped with ❤ by me, powered by <a href='http://octopress.org/'>Octopress</a></h4>
 </div>
 
 
@@ -247,8 +242,8 @@ That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to u
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/';
-        var disqus_url = 'http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/';
+        var disqus_identifier = 'http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation/';
+        var disqus_url = 'http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation/';
         var disqus_script = 'embed.js';
       
     (function () {

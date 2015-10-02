@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Drone | Flying Robot Projects]]></title>
+  <title><![CDATA[Category: drone | Flying Robot Projects]]></title>
   <link href="http://flying-robot-projects.net/blog/categories/drone/atom.xml" rel="self"/>
   <link href="http://flying-robot-projects.net/"/>
-  <updated>2015-08-26T13:49:23+02:00</updated>
+  <updated>2015-10-02T22:27:35+02:00</updated>
   <id>http://flying-robot-projects.net/</id>
   <author>
     <name><![CDATA[Arnaud Lenglet]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Developing the Mission Control Center Software]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software/"/>
+    <title type="html"><![CDATA[Developing the Mission Control Center software]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/"/>
     <updated>2015-08-07T22:33:20+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software</id>
+    <id>http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software</id>
     <content type="html"><![CDATA[<p>While working on the <a href="/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
 From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
 
@@ -70,10 +70,10 @@ How did I missed it?!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Earth to Space in 5 Projects: Presentation]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
+    <title type="html"><![CDATA[Earth to space in 5 projects: presentation]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
     <updated>2015-07-09T08:51:41+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation</id>
+    <id>http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation</id>
     <content type="html"><![CDATA[<p>I&rsquo;m thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within <strong>july 2016</strong>, which would be able to reach an altitude of <strong>1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered</strong>.</p>
 
 <!--more-->
@@ -250,6 +250,230 @@ The revised roadmap now includes 5 major steps:</p>
 <hr />
 
 <p>I&rsquo;ll explain each step in further posts.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[De la Terre à l'espace en 5 projets robotiques]]></title>
+    <link href="http://flying-robot-projects.net/fr/2015/07/09/de-la-terre-a-l-espace-en-5-projets-robotiques-presentation/"/>
+    <updated>2015-07-09T08:51:41+02:00</updated>
+    <id>http://flying-robot-projects.net/fr/2015/07/09/de-la-terre-a-l-espace-en-5-projets-robotiques-presentation</id>
+    <content type="html"><![CDATA[<p>J'y pense depuis des années, et ça y est : avec ce blog, je lance officiellement mon projet de fusée ! Le but de ce projet est de créer une <strong>fusée autonome</strong>, avant <strong>juillet 2016</strong>, qui soit capable de décoller, d'atteindre l'altitude de <strong>1 000 m</strong>, de <strong>prendre une photo du pas de tir</strong> lorsqu'elle sera à l'apogée de son vol, puis <strong>d'atterrir tranquillement au sol</strong> de manière à être récupérée.</p>
+
+<!--more-->
+
+
+<p>Je sais pertinemment que cet objectif inclut de nombreuses difficultés et de multiples défis, défis pour lesquels je n'ai - pour la plupart d'entre-eux - pas de solution actuellement. Cependant, ce n'est pas un soucis, puisque c'est là le propre d'un ingénieur : être confronté à un problème, trouver une solution, et passer au problème suivant.</p>
+
+<h2>C'est parti, ça va être fun !</h2>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Barney-Challenge-Accepted.jpg">
+</p>
+
+
+<p>Afin de préserver ma motivation tout au long de ce parcours de longue haleine, j'ai décidé d'y aller étape par étape, et de séparer ce grand projet en plusieurs projets plus petits.</p>
+
+<p>A l'été 2015, voici à quoi ressemblait ce découpage :</p>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg">
+</p>
+
+
+<p>L'idée de base était que chaque étape mène à la suivante, en permettant progressivement d'augmenter le niveau technique de l'ensemble.
+Ainsi, le système global - le robot - se voit agrémenter au fur et à mesure de ses itérations, de plus en plus de capteurs, actionneurs et systèmes embarqués et distants.</p>
+
+<p>Ma roadmap actuelle a peu évolué, et j'y ai simplement ajouté une étape supplémentaire, pour porter le nombre de projets à 5 au total.</p>
+
+<p>Voici les 5 étapes par lesquelles je compte passer pour atteindre mon objectif de fusée robotisée.</p>
+
+<hr />
+
+<h3>Étape 1 : La montgolfière</h3>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/home/step-1-black-300x300.png">
+</p>
+
+
+<h4>Objectifs du projet</h4>
+
+<ol>
+<li>Enregistrer l'altitude et l'accélération durant l'ensemble du vol</li>
+<li>Transmettre ces données durant le vol à une base au sol</li>
+<li>Être capable de décoller automatiquement, d'atteindre l'altitude désirée, puis d'atterrir en douceur</li>
+</ol>
+
+
+<h4>Nouveaux systèmes développés</h4>
+
+<ul>
+<li><strong>Master Chief System</strong> (MCS) : système coordonnant les autres systèmes embarqués durant le vol (cerveau du robot)</li>
+<li><strong>Sensor Management System</strong> (SMS) : récolte et enregistre les valeurs des différents capteurs du robot</li>
+<li><strong>Telemetry Streaming System</strong> (TSS) : transmet un flux de données vers la station au sol</li>
+</ul>
+
+
+<h4>Nouveaux équipements embarqués</h4>
+
+<ul>
+<li>Altimètre</li>
+<li>Accéléromètre</li>
+<li>Antenne 4G</li>
+</ul>
+
+
+<hr />
+
+<h3>Étape 2 : Le zeppelin</h3>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/home/step-2-black-300x300.png">
+</p>
+
+
+<h4>Objectifs du projet</h4>
+
+<ol>
+<li>Envoyer des ordres depuis la station au sol vers le robot en vol (à l'étape précédente je ne pouvais que recevoir des données)</li>
+<li>Voler en ligne droite de manière autonome et effectuer 5 virages</li>
+<li>Maintenir un cap et une altitude pendant 1 minute</li>
+</ol>
+
+
+<h4>Nouveaux systèmes développés</h4>
+
+<ul>
+<li><strong>Remote guidance system</strong> (RGS) : reçoit et traite les informations reçues de la station au sol</li>
+<li><strong>Position &amp; Navigation System</strong> (PNS) <em>[version 1]</em> : première version du système permettant de gérer la position, la vitesse horizontale et verticale, l'altitude, le roulis, le tangage et le lacet du robot</li>
+<li><strong>Energy &amp; Propulsion System</strong> (EPS) <em>[version 1]</em> : ébauche du système qui gérera à terme les batteries, le carburant et les moteurs</li>
+</ul>
+
+
+<h4>Nouveaux équipements embarqués</h4>
+
+<ul>
+<li>Gyroscope</li>
+<li>Boussole</li>
+<li>Servomoteur</li>
+<li>Moteur &ldquo;brushless&rdquo;</li>
+</ul>
+
+
+<hr />
+
+<h3>Étape 3 : L'avion</h3>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/home/step-3-black-300x300.png">
+</p>
+
+
+<h4>Objectifs du projet</h4>
+
+<ol>
+<li>Transmettre en temps réel une vidéo depuis le robot en vol vers la station au sol (streaming)</li>
+<li>Suivre un plan de vol comprenant 5 points de passage</li>
+<li>Décoller et atterrir de façon assistée (le pilote humain positionne le robot au bon endroit avant d'enclencher la séquence de décollage ou d'atterrissage)</li>
+</ol>
+
+
+<h4>Nouveaux systèmes développés</h4>
+
+<ul>
+<li><strong>Take off and landing System</strong> (TLS) <em>[version 1]</em> : première version du pilote automatique permettant le décollage et l'atterrissage</li>
+<li><strong>Flight Plan System</strong> (FPS) : gère le plan de vol et les points de passage</li>
+<li><strong>Video Streaming System</strong> (VSS) : stream la vidéo provenant de la caméra du robot vers la station au sol</li>
+</ul>
+
+
+<h4>Nouveaux équipements embarqués</h4>
+
+<ul>
+<li>Caméra vidéo</li>
+<li>Capteur à ultrason</li>
+<li>Capteur de vitesse air</li>
+</ul>
+
+
+<hr />
+
+<h3>Étape 4 : Le drone</h3>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/home/step-4-black-300x300.png">
+</p>
+
+
+<h4>Objectifs du projet</h4>
+
+<ol>
+<li>Décoller et atterrir de manière complètement autonome</li>
+<li>Adapter automatiquement le comportement du robot en vol en fonction des conditions extérieures (vent)</li>
+<li>Déclencher une procédure d'urgence</li>
+</ol>
+
+
+<h4>Nouveaux systèmes développés</h4>
+
+<ul>
+<li><strong>Emergency &amp; Abort System</strong> (EAS) : déclenche une procédure d'arrêt en cas d'urgence</li>
+<li><strong>Take off and landing System</strong> (TLS) <em>[version 2]</em> : gère le décollage et l'atterrissage de manière entièrement autonome</li>
+<li><strong>Position &amp; Navigation System</strong> (PNS) <em>[version 2]</em> : gère la position, la vitesse horizontale et verticale, l'altitude, le roulis, le tangage et le lacet du robot</li>
+</ul>
+
+
+<h4>Nouveaux équipements embarqués</h4>
+
+<ul>
+<li>Capteur de température</li>
+<li>Capteur de pression atmosphérique</li>
+<li>Capteur d'humidité</li>
+</ul>
+
+
+<hr />
+
+<h3>Étape 5 : La fusée (oh yeah !)</h3>
+
+<p class="image center">
+  <img src="http://flying-robot-projects.net/images/home/step-5-black-300x300.png">
+</p>
+
+
+<h4>Objectifs du projet</h4>
+
+<ol>
+<li>Atteindre l'altitude cible de 1 000 m</li>
+<li>Prendre une vidéo du pas de tir à l'apogée du vol</li>
+<li>Déployer un parachute pour atterrir doucement et être récupéré</li>
+</ol>
+
+
+<h4>Nouveaux systèmes développés</h4>
+
+<ul>
+<li><strong>Location &amp; Recovery System</strong> (LRS) : système permettant de récupérer le robot après l'atterrissage (ou le crash&hellip;)</li>
+<li><strong>Atmospheric &amp; Meteorological System</strong> (AMS) : surveille les conditions météorologiques en se basant à la fois sur les capteurs embarqués et sur les informations transmises par la station au sol</li>
+<li><strong>Energy &amp; Propulsion System</strong> (EPS) <em>[version 2]</em> : gère les batteries, le carburant et les moteurs</li>
+</ul>
+
+
+<h4>Nouveaux équipements embarqués</h4>
+
+<ul>
+<li>GPS</li>
+<li>Parachutes</li>
+<li>Propulsion</li>
+</ul>
+
+
+<hr />
+
+<p>J'expliquerai chacune de ces étapes dans les publications suivantes.</p>
+
+<p>A très bientôt ! :)</p>
 ]]></content>
   </entry>
   

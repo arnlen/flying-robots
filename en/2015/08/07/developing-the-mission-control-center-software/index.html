@@ -9,13 +9,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Balloon Project: Presentation - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
+  <title>Developing the Mission Control Center software - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
   <meta name="author" content="Arnaud Lenglet">
 
   
   
-  <meta name="description" content=" The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket. ">
-  <meta name="keywords" content="balloon robots robotics">
+  <meta name="description" content="While working on the Telemetry Streaming System (TSS), I realised I was in need of something more. I don&rsquo;t only need a software to receive and store &hellip;">
+  <meta name="keywords" content="api development ruby rails emberjs robots robotics">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation">
+  <link rel="canonical" href="http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Flying Robot Projects" type="application/atom+xml">
@@ -66,7 +66,7 @@
 </head>
   <body>
     <div class="page-header-banner">
-  <h1>Balloon project: presentation</h1>
+  <h1>Developing the Mission Control Center software</h1>
 </div>
 
 <article role="article" class="full-single-article">
@@ -74,11 +74,14 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
 
-        <a href="/" class="home-icon">
+        <a href="/en" class="home-icon">
           <img src="/images/home.png"/>
         </a>
 
         <div class="meta">
+          <span class="language-selector">
+            
+          </span>
           written by Arnaud Lenglet 
 
 
@@ -92,79 +95,67 @@
 
 
 
-<time datetime="2015-07-14T12:50:19+02:00" pubdate data-updated="true"></time>
+<time datetime="2015-08-07T22:33:20+02:00" pubdate data-updated="true"></time>
           <br>
           
 
 in
 <span class="categories">
   
-    <a class='category' href='/blog/categories/balloon/'>balloon</a>
+    <a class='category' href='/blog/categories/balloon/'>balloon</a>, <a class='category' href='/blog/categories/drone/'>drone</a>, <a class='category' href='/blog/categories/plane/'>plane</a>, <a class='category' href='/blog/categories/rocket/'>rocket</a>, <a class='category' href='/blog/categories/zeppelin/'>zeppelin</a>
   
 </span>
 
 
         </div>
-        <p>The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.</p>
+        <p>While working on the <a href="/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
+From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
 
-<!--more-->
+<p>In fact, space agencies call this the <strong>Mission Control Center</strong>.</p>
+
+<!-- more -->
 
 
-<p>As described in <a href="/blog/2015/07/09/one-year-rocket-project/">this original post</a>, here are the key points of the balloon project:</p>
 
-<h4>Objectives</h4>
+
+<p class="image center">
+  <img src="/images/2015/08/Main-Control-Room-ESA-Space-Operations-Centre.jpg" alt="The European Space Agency (ESA) Space Operations Centre">
+</p>
+
+
+<p>In my case, I won&rsquo;t have to build a huge high-tech room, and filling it up with shiny computers and smart guys.
+Rather that, what I precisely need is a software capable of:</p>
 
 <ol>
-<li>Record altitude and acceleration during the whole flight</li>
-<li>Transmit those data in flight</li>
-<li>Auto lift off, reach to target altitude, and soft landing</li>
+<li>Monitor the robot (balloon, zeppelin, plane, drone of rocket) on the launch pad</li>
+<li>Supervise and run the launch sequence through its successive stages until lift-off</li>
+<li>Monitor the flying robot during the accomplishment of its in flight missions</li>
+<li>Receive and send data from and to the flying machine</li>
+<li>Localize the robot once landed</li>
 </ol>
 
 
-<h4>New systems involved</h4>
+<p>Because this Mission Control Center is not precisely part of my future rocket, I neglected it until now&hellip; whereas it&rsquo;s definitely a requirement for every flight!
+How did I missed it?!</p>
+
+<p class="image center">
+  <img src="/images/2015/08/sheldon-cooper.gif" alt="Sheldon Cooper says no">
+</p>
+
+
+<p>This is the good thing with iterations: each iteration helps to determine the next one.</p>
+
+<p>It&rsquo;s so exciting! On this first &ldquo;balloon&rdquo; iteration, I&rsquo;m discovering so many things right now! It&rsquo;s amazing!</p>
+
+<p>Here are a few details of the Mission Control Center software I&rsquo;m actually developing, and what will be under the hood:</p>
 
 <ul>
-<li>Master Chief System (MCS): coordinator systems during flight</li>
-<li>Sensor Management System (SMS): capture and record various data from sensors</li>
-<li>Telemetry Streaming System (TSS): stream data to ground station (via 4G connexion)</li>
+<li><strong>An API</strong> developed in Ruby on Rails. This part would do all the core business jobs.</li>
+<li><strong>A frontend</strong> developed in EmberJS. This would be the monitor part, from which I would be able to interact with the flying robot.</li>
 </ul>
 
 
-<h4>New on board tools (in comparison to previous step)</h4>
-
-<ul>
-<li>Altimeter</li>
-<li>Accelerometer</li>
-<li>4G antenna</li>
-</ul>
-
-
-<hr />
-
-<p>I don&rsquo;t want to reinvent the wheel with this project. That&rsquo;s why I&rsquo;ll try to <strong>mimic</strong> real balloon systems as much as possible.</p>
-
-<table>
-<thead>
-<tr>
-<th> </th>
-<th> </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> <img src="/images/2015/07/hot-air-balloon-diagram.jpg"> </td>
-<td> <img src="/images/2015/07/balloon-techparts.JPG"> </td>
-</tr>
-<tr>
-<td> <img src="/images/2015/07/balloon-gas.jpg"> </td>
-<td> <img src="/images/2015/07/hot-air-balloon-3.jpg"> </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>The only real difference between my balloon and real once would be the pilot: my balloon would be <strong>autonomous</strong> and <strong>remote monitored</strong>.
-The idea is to really have, even at this first step, a real <strong>flying robot</strong>.</p>
+<p>You can follow the progress of both of these projects on the <a target="_blank" href="https://github.com/flying-robot-projects">GitHub page of the Flying Robot Project organization</a>.</p>
 
 
         <hr class="divider-short"/>
@@ -188,11 +179,9 @@ The idea is to really have, even at this first step, a real <strong>flying robot
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2015/07/09/earth-to-space-in-5-projects-presentation/" title="Previous Post: Earth to space in 5 projects: presentation">&laquo; Previous: Earth to space in 5 projects: presentation</a>
-        
 
         
-          <a class="pull-right" href="/blog/2015/07/25/balloon-propulsion-design/" title="Next Post: Balloon: propulsion system design">Next: Balloon: propulsion system design &raquo;</a>
+          <a class="pull-right" href="/en/2015/07/30/telemetry-streaming-system-tss-design/" title="Next Post: Telemetry Streaming System (TSS): design">Next: Telemetry Streaming System (TSS): design &raquo;</a>
         
       </div>
     </div>
@@ -203,7 +192,7 @@ The idea is to really have, even at this first step, a real <strong>flying robot
   <div class="container">
     <div class="row">
       <div class="pull-right">
-  <h4>Powered by <a href="http://octopress.org/">Octopress</a></h4>
+  <h4>Developped with ❤ by me, powered by <a href='http://octopress.org/'>Octopress</a></h4>
 </div>
 
 
@@ -239,8 +228,8 @@ The idea is to really have, even at this first step, a real <strong>flying robot
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation/';
-        var disqus_url = 'http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation/';
+        var disqus_identifier = 'http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/';
+        var disqus_url = 'http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/';
         var disqus_script = 'embed.js';
       
     (function () {

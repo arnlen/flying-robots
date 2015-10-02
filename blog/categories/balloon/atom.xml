@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Balloon | Flying Robot Projects]]></title>
+  <title><![CDATA[Category: balloon | Flying Robot Projects]]></title>
   <link href="http://flying-robot-projects.net/blog/categories/balloon/atom.xml" rel="self"/>
   <link href="http://flying-robot-projects.net/"/>
-  <updated>2015-08-26T13:49:23+02:00</updated>
+  <updated>2015-10-02T22:27:35+02:00</updated>
   <id>http://flying-robot-projects.net/</id>
   <author>
     <name><![CDATA[Arnaud Lenglet]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Developing the Mission Control Center Software]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software/"/>
+    <title type="html"><![CDATA[Developing the Mission Control Center software]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/"/>
     <updated>2015-08-07T22:33:20+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software</id>
+    <id>http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software</id>
     <content type="html"><![CDATA[<p>While working on the <a href="/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
 From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
 
@@ -70,10 +70,10 @@ How did I missed it?!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Telemetry Streaming System (TSS): Design]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design/"/>
+    <title type="html"><![CDATA[Telemetry Streaming System (TSS): design]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/30/telemetry-streaming-system-tss-design/"/>
     <updated>2015-07-30T22:56:55+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/30/telemetry-streaming-system-tss-design</id>
+    <id>http://flying-robot-projects.net/en/2015/07/30/telemetry-streaming-system-tss-design</id>
     <content type="html"><![CDATA[<p>While parts of my <a href="/blog/2015/07/25/balloon-propulsion-design/">propulsion system</a> are still in coming, I decide to come back to my first focus: the Telemetry Streaming System (TSS).
 The goal of this system is to <strong>transfer in flight data</strong> (altitude, pressure, horizontal and vertical speed, engine temperature,&hellip;) <strong>to the ground station</strong> for monitoring purpose.</p>
 
@@ -155,10 +155,10 @@ This idea isn&rsquo;t to build the best and perfect system from the first strike
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Balloon: Propulsion System Design]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design/"/>
+    <title type="html"><![CDATA[Balloon: propulsion system design]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/25/balloon-propulsion-design/"/>
     <updated>2015-07-25T23:48:43+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/25/balloon-propulsion-design</id>
+    <id>http://flying-robot-projects.net/en/2015/07/25/balloon-propulsion-design</id>
     <content type="html"><![CDATA[<p>I was about to start the design of the Telemetry Streaming System (TSS), but I suddenly have many ideas about propulsions and ways to implement it for my balloon.
 I&rsquo;ve so started few draws you&rsquo;ll find in this post.</p>
 
@@ -231,10 +231,10 @@ That&rsquo;s why I&rsquo;ve chosen not to build a protection by myself, but to u
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Balloon Project: Presentation]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation/"/>
+    <title type="html"><![CDATA[Balloon project: presentation]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation/"/>
     <updated>2015-07-14T12:50:19+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/14/balloon-project-presentation</id>
+    <id>http://flying-robot-projects.net/en/2015/07/14/balloon-project-presentation</id>
     <content type="html"><![CDATA[<p>The balloon project is the first step to go to space. This project will lead to the development of key features which would be later required by my rocket.</p>
 
 <!--more-->
@@ -299,10 +299,10 @@ The idea is to really have, even at this first step, a real <strong>flying robot
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Earth to Space in 5 Projects: Presentation]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
+    <title type="html"><![CDATA[Earth to space in 5 projects: presentation]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
     <updated>2015-07-09T08:51:41+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation</id>
+    <id>http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation</id>
     <content type="html"><![CDATA[<p>I&rsquo;m thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within <strong>july 2016</strong>, which would be able to reach an altitude of <strong>1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered</strong>.</p>
 
 <!--more-->

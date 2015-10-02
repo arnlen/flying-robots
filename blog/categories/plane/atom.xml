@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Plane | Flying Robot Projects]]></title>
+  <title><![CDATA[Category: plane | Flying Robot Projects]]></title>
   <link href="http://flying-robot-projects.net/blog/categories/plane/atom.xml" rel="self"/>
   <link href="http://flying-robot-projects.net/"/>
-  <updated>2015-08-26T13:49:23+02:00</updated>
+  <updated>2015-10-02T22:27:35+02:00</updated>
   <id>http://flying-robot-projects.net/</id>
   <author>
     <name><![CDATA[Arnaud Lenglet]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Developing the Mission Control Center Software]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software/"/>
+    <title type="html"><![CDATA[Developing the Mission Control Center software]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/"/>
     <updated>2015-08-07T22:33:20+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/08/07/developing-the-mission-control-center-software</id>
+    <id>http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software</id>
     <content type="html"><![CDATA[<p>While working on the <a href="/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
 From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
 
@@ -70,10 +70,10 @@ How did I missed it?!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Earth to Space in 5 Projects: Presentation]]></title>
-    <link href="http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
+    <title type="html"><![CDATA[Earth to space in 5 projects: presentation]]></title>
+    <link href="http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation/"/>
     <updated>2015-07-09T08:51:41+02:00</updated>
-    <id>http://flying-robot-projects.net/blog/2015/07/09/earth-to-space-in-5-projects-presentation</id>
+    <id>http://flying-robot-projects.net/en/2015/07/09/earth-to-space-in-5-projects-presentation</id>
     <content type="html"><![CDATA[<p>I&rsquo;m thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within <strong>july 2016</strong>, which would be able to reach an altitude of <strong>1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered</strong>.</p>
 
 <!--more-->
