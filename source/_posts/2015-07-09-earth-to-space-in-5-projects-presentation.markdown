@@ -7,6 +7,7 @@ categories: Balloon Zeppelin Plane Drone Rocket
 keywords: balloon zeppelin plane drone rocket robots robotics
 thumbnail: /images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg
 lang: en
+translation_id: ce2cff1398cf115a6034072b52ba415b
 ---
 
 I'm thinking about this for years, and this is it: with this blog, I officially launch my rocket project! The goal of this project is to create a rocket, within **july 2016**, which would be able to reach an altitude of **1 000 m, take a picture of the launch pad when at apoapsis, and land softly in order to be recovered**.

@@ -12,12 +12,17 @@ single: true
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
 
-        <a href="/" class="home-icon">
+        <a href="{{ lang.home.url }}" class="home-icon">
           <img src="/images/home.png"/>
         </a>
 
         <div class="meta">
-          written by {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+          <span class="language-selector">
+            {% if page.translated %}
+              {{ lang.post.language-selector }} {% translations page %}
+            {% endif %}
+          </span>
+          {{ lang.post.written-by }} {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
           <br>
           {% include post/categories.html %}
         </div>

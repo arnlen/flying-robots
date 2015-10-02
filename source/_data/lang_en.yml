@@ -1,4 +1,5 @@
 home:
+  url: "/en"
   hero:
     subtitle: "From Earth to space with 5 autonomous flying robots."
     current-step: "Current project"
@@ -19,3 +20,6 @@ footer:
     home: "Home"
     about: "About this blog"
   end-footer: "Developped with \u2764 by me, powered by <a href='http://octopress.org/'>Octopress</a>"
+post:
+  written-by: "written by"
+  language-selector: "Lire en"

@@ -7,6 +7,7 @@ categories: Montgolfière Zeppelin Avion Drone Fusée
 keywords: montgolfière zeppelin avion drone fusée robots robotique
 thumbnail: /images/2015/07/Flying-Robots-One-Year-Rocket-Project-Roadmap-by-Arnaud-Lenglet.jpg
 lang: fr
+translation_id: ce2cff1398cf115a6034072b52ba415b
 ---
 
 J'y pense depuis des années, et ça y est : avec ce blog, je lance officiellement mon projet de fusée ! Le but de ce projet est de créer une **fusée autonome**, avant **juillet 2016**, qui soit capable de décoller, d'atteindre l'altitude de **1 000 m**, de **prendre une photo du pas de tir** lorsqu'elle sera à l'apogée de son vol, puis **d'atterrir tranquillement au sol** de manière à être récupérée.

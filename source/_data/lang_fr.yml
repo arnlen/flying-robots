@@ -1,4 +1,5 @@
 home:
+  url: "/fr"
   hero:
     subtitle: "De la Terre à l'espace, en 5 projets de robots volants autonomes."
     current-step: "Projet en cours"
@@ -19,3 +20,6 @@ footer:
     home: "Accueil"
     about: "A propos"
   end-footer: "Développé avec \u2764 par mes soins, propulsé par <a href='http://octopress.org/'>Octopress</a>"
+post:
+  written-by: "écrit par"
+  language-selector: "Read in"
