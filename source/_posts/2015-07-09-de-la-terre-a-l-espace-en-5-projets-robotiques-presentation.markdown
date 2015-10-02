@@ -31,6 +31,10 @@ Ma roadmap actuelle a peu évoluée, et j'y ai simplement ajouté une étape sup
 Voici les 5 étapes par lesquelles je compte passer pour atteindre mon objectif de fusée robotisée.
 
 ---
+<p class="image center">
+  <img src="/images/home/step-1-black-300x300.png">
+</p>
+
 ### Étape 1 : La montgolfière
 
 #### Objectifs du projet
@@ -38,17 +42,21 @@ Voici les 5 étapes par lesquelles je compte passer pour atteindre mon objectif 
 2. Transmettre ces données durant le vol à une base au sol
 3. Être capable de décoller automatiquement, d'atteindre l'altitude désirée, puis d'atterrir en douceur
 
-#### Nouveaux systèmes développés durant cette étape
+#### Nouveaux systèmes développés
 - **Master Chief System** (MCS) : système coordonnant les autres systèmes embarqués durant le vol (cerveau du robot)
 - **Sensor Management System** (SMS) : récolte et enregistre les valeurs des différents capteurs du robot
 - **Telemetry Streaming System** (TSS) : transmet un flux de données vers la station au sol
 
-#### Nouveaux équipements embarqués lors de cette étape
+#### Nouveaux équipements embarqués
 - Altimètre
 - Accéléromètre
 - Antenne 4G
 
 ---
+<p class="image center">
+  <img src="/images/home/step-2-black-300x300.png">
+</p>
+
 ### Étape 2 : Le zeppelin
 
 #### Objectifs du projet
@@ -56,67 +64,79 @@ Voici les 5 étapes par lesquelles je compte passer pour atteindre mon objectif 
 2. Voler en ligne droite de manière autonome et effectuer 5 virages
 3. Maintenir un cap et une altitude pendant 1 minute
 
-#### Nouveaux systèmes développés durant cette étape
+#### Nouveaux systèmes développés
 - **Remote guidance system** (RGS) : reçoit et traite les informations reçues de la station au sol
 - [v1] **Position & Navigation System** (PNS) : première version du système permettant de gérer la position, la vitesse horizontale et verticale, l'altitude, le roulis, le tangage et le lacet du robot
 - [v1] **Energy & Propulsion System** (EPS) : ébauche du système qui gérera à terme les batteries, le carburant et les moteurs
 
-#### Nouveaux équipements embarqués lors de cette étape
+#### Nouveaux équipements embarqués
 - Gyroscope
 - Boussole
 - Servomoteur
 - Moteur "brushless"
 
 ---
+<p class="image center">
+  <img src="/images/home/step-3-black-300x300.png">
+</p>
+
 ### Étape 3 : L'avion
 
-#### Objectifs
+#### Objectifs du projet
 1. Transmettre en temps réel d'une vidéo depuis le robot en vol vers la station au sol (streaming)
 2. Suivre un plan de vol comprenant 5 points de passage
 3. Décoller et atterrir de façon assistée (le pilote humain positionne le robot au bon endroit avant d'enclencher la séquence d'atterrissage/de décollage)
 
-#### Nouveaux systèmes développés durant cette étape :
+#### Nouveaux systèmes développés
 - [v1] **Take off and landing System** (TLS): première version du pilote automatique permettant le décollage et l'atterrissage
 - **Flight Plan System** (FPS): gère le plan de vol et les points de passage
 - **Video Streaming System** (VSS): stream la vidéo provenant de la caméra du robot vers la station au sol
 
-#### Nouveaux équipements embarqués lors de cette étape :
+#### Nouveaux équipements embarqués
 - Caméra vidéo
 - Capteur à ultrason
 - Capteur de vitesse air
 
 ---
-### Step 4 : Le drone
+<p class="image center">
+  <img src="/images/home/step-4-black-300x300.png">
+</p>
 
-#### Objectifs
+### Étape 4 : Le drone
+
+#### Objectifs du projet
  1. Décoller et atterrir de manière complètement autonome
  2. Adapte son comportement en vol en fonction des conditions extérieur (vent)
  3. Déclenche une procédure d'urgence
 
-#### Nouveaux systèmes développés durant cette étape :
+#### Nouveaux systèmes développés
 - **Emergency & Abort System** (EAS): déclenche une procédure d'arrêt en cas d'urgence
 - [v2] **Take off and landing System** (TLS): gère le décollage et l'atterrissage de manière entièrement autonome
 - [v2] **Position & Navigation System** (PNS): gère la position, la vitesse horizontale et verticale, l'altitude, le roulis, le tangage et le lacet du robot
 
-#### Nouveaux équipements embarqués lors de cette étape :
+#### Nouveaux équipements embarqués
 - Capteur de température
 - Capteur de pression atmosphérique
 - Capteur d'humidité
 
 ---
-### Step 5 : Rocket project
+<p class="image center">
+  <img src="/images/home/step-5-black-300x300.png">
+</p>
 
-#### Objectives
+### Étape 5 : La fusée
+
+#### Objectifs du projet
  1. Atteint l'altitude cible de 1 000 m
  2. Prend une vidéo du pas de tir à l'apogée du vol
  3. Déploie un parachute pour atterrir doucement et être récupéré
 
-#### New systems involved
+#### Nouveaux systèmes développés
 - **Location & Recovery System** (LRS): système permettant de récupérer le robot après l'atterrissage ou le crash
 - **Atmospheric & Meteorological System** (AMS): surveille les conditions météorologiques en se basant à la fois sur les capteurs embarqués et sur les informations transmises par la station au sol
 - [v2] **Energy & Propulsion System** (EPS): gère les batteries, le carburant et les moteurs
 
-#### New on board tools (in comparison to previous step)
+#### Nouveaux équipements embarqués
 - GPS
 - Parachutes
 - Propulsion
