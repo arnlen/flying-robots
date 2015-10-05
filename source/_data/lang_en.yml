@@ -1,4 +1,5 @@
 home:
+  page-name: "Home"
   hero:
     subtitle: "From Earth to space with 5 autonomous flying robots."
     current-step: "Current project"
@@ -6,6 +7,7 @@ home:
   landing-row:
     title: "Hi and welcome!"
     about: "My name is Arnaud Lenglet, I'm a space and robotics enthusiast. This blog is dedicated to the creation my own autonomous rocket. You can follow my progress through the posts bellow, or read more about this blog and I <a href='/about'>on this about page</a>. Enjoy!"
+    about-link: "More about this project &rarr;"
   article-list:
     header: "Robotic projects news"
     subtitle: "Designs, crash tests, successes, failures and more"

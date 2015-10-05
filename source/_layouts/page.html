@@ -10,12 +10,24 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
+
+        <a href="/{{ page.lang }}" class="home-icon">
+          <img src="/images/home.png"/>
+        </a>
+
         <div class="meta">
-          <a href="/">Home</a> > {{ page.title }}
+          <span class="language-selector">
+            {% if page.translated %}
+              {{ lang.post.language-selector }} {% translations page %}
+            {% endif %}
+          </span>
+          <a href="/{{ page.lang }}">{{ lang.home.page-name }}</a> > {{ page.title }}
           <br>
-          written by {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+          {{ lang.post.written-by }} {{ site.author }} {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         </div>
+
         {{ content }}
+
       </div>
     </div>
   </div>

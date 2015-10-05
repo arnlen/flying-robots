@@ -5,6 +5,7 @@ date: 2015-07-08 22:28
 comments: true
 sharing: true
 footer: true
+lang: fr
 ---
 
 <img class="about-profile-image" alt="Arnaud Lenglet - Robotics and space enthusiast" src="/images/Arnaud Lenglet GitHub.jpeg">
