@@ -29,10 +29,10 @@ Les choses qui volent sont cool par vrai ?
 De plus, les robots sont géniaux, c'est un fait.
 Ainsi, des robots qui volent doivent être - sans aucun doute possible - **génialement cool** ! (C'est de la pure logique ici)
 
-Hum... pas convaincu ? Tu veux une autre raison ?
-Simplement parce que les choses volantes son **beaaaaaaaaucoup** plus fun et excitantes que celles qui marchent, roulent, rampent, sautilles, etc. Et là où il y a de l'excitation, il y a aussi la motivation et le pouvoir de **déplacer des montagnes** !
+Hum... pas convaincu ?
+Plus sérieusement : simplement parce que les choses volantes son **beaaaaaaaaucoup** plus fun et excitantes que celles qui marchent, roulent, rampent, sautilles, etc. Et là où il y a de l'excitation, il y a aussi la motivation et le pouvoir de **déplacer des montagnes** !
 
-Chercher à construire des robots volants est donc - pour moi - un très bon moyen de conserver ma motivation sur le long terme, tout en visant un objectif vraiment très cool.
+Chercher à construire des robots volants est donc - pour moi - un très bon moyen de **conserver ma motivation** sur le long terme, tout en visant un objectif vraiment très sympa.
 
 
 ## Pourquoi une fusée ?
@@ -75,5 +75,5 @@ Tout ce que j'ai pu accomplir depuis 2008, c'est **uniquement grâce à Dieu**.
 Il me donne chaque jour la force de me lever, de me dépasser, et de continuer à avancer, quoiqu'il arrive.
 
 <p class="image-container">
-  <img class="aciou-image" alt="Verset Jérémy 9.11 : Car je ne connais les projets que j'ai formé sur vous dit l'Eternel, projets de paix et non de malheur, afin de vous donner un avenir rempli d'espérance." src="/images/Bible-Jemerie-9-11-Promesse-Dieu-Projets-Paix-Assurance.jpg">
+  <img class="aciou-image" alt="Verset Jérémie 29.11 : Oui, moi le Seigneur, je connais les projets que je forme pour vous. Je le déclare : ce ne sont pas des projets de malheur mais des projets de bonheur. Je veux vous donner un avenir plein d'espérance." src="/images/Verset-Bible-Jeremie-29-11-Dieu-Projets-paix-non-malheur-avenir-esperance.jpg">
 </p>
