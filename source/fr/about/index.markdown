@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A propos de ce blog"
+title: "A propos de ce projet"
 date: 2015-07-08 22:28
 comments: true
 sharing: true
@@ -8,9 +8,9 @@ footer: true
 lang: fr
 ---
 
-<img class="about-profile-image" alt="Arnaud Lenglet - Robotics and space enthusiast" src="/images/Arnaud Lenglet GitHub.jpeg">
+<img class="about-profile-image" alt="Arnaud Lenglet - Développeur passionné de robotique spatiale" src="/images/Arnaud Lenglet GitHub.jpeg">
 
-Alors comme ça tu veux en savoir plus sur ce blog ? Content de l'entendre ! **Sois le/la bienvenu(e)** ! Installe-toi et mets-toi à l'aise : tu es mon invité(e).
+Alors comme ça tu veux en savoir plus sur ce projet ? Content de l'entendre ! **Sois le/la bienvenu(e)** ! Installe-toi et mets-toi à l'aise : tu es mon invité(e).
 
 Ce blog a été créé en 2015 dans un but précis : m'aider à réaliser l'un de mes rêves, à savoir, **créer ma propre fusée autonome**.
 
@@ -19,7 +19,7 @@ Ce blog a été créé en 2015 dans un but précis : m'aider à réaliser l'un d
 En somme : bienvenue sur mon meilleur outil de motivation ! :)
 
 <p class="image-container">
-  <img class="logbook-image" alt="Logbook image" src="/images/Pilot-logbooks-600x399.jpg">
+  <img class="logbook-image" alt="Arnaud Lenglet Logbook image" src="/images/Pilot-logbooks-600x399.jpg">
 </p>
 
 
@@ -43,7 +43,7 @@ Un illustre inconnu a dit un jour : "Le décollage d'une fusée est définitivem
   <blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Rocket lift off is definitely the coolest, most impressive and most exciting tech event to see on this planet! <a href="https://twitter.com/hashtag/space?src=hash">#space</a> <a href="http://t.co/q9fg58QhJt">pic.twitter.com/q9fg58QhJt</a></p>&mdash; Arnaud Lenglet (@arnlen) <a href="https://twitter.com/arnlen/status/618882520679997445">8 Juillet 2015</a></blockquote>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <img src="/images/meme/true-story.png">
+  <img src="/images/meme/true-story.png" alt="Barney True Story Meme">
 </div>
 
 (Oui, je sais : s'auto-citer est totalement égocentrique...)
@@ -52,6 +52,8 @@ Un illustre inconnu a dit un jour : "Le décollage d'une fusée est définitivem
 ## Quelques infos de plus sur moi
 
 Je vis en France, près de Paris.
+Développeur depuis des années, entrepreneur dans l'âme, j'aime créer, innover, apprendre et partager.
+
 J'ai fait une rencontre exceptionnelle en 2008 qui a bouleversée ma vie : **j'ai rencontré Dieu**. Je pourrai t'en parler pendant des heures, mais depuis ce jour où Dieu - en la personne de Jésus Christ - m'a démontré à quel point Il m'aimait, ma vie a été transformée.
 
 Je suis passé par les eaux du **baptême** en février 2009.
@@ -63,12 +65,15 @@ En 2012 je créais mon **entreprise** autour d'une solution SaaS pour la restaur
 En parallèle je devenais **Sapeur Pompier Volontaire** dans le Val d'Oise.
 J'ai quitté dernièrement - début 2015 - le statut d'employer pour embrasser celui de **freelance**.
 
-Depuis ce changement, j'apprécie vraiment d'avoir davantage de contrôle sur mon temps, et de pouvoir commencer à mettre en place des projets pour réaliser les projets et rêves que Dieu me met à coeur !
-
-Développeur depuis des années, entrepreneur dans l'âme, j'aime créer, innover, apprendre et partager.
-
 Oh ! Et j'ai un chien robot aussi. Il s'appelle **Aciou**.
 
 <p class="image-container">
   <img class="aciou-image" alt="Here is Aciou, my boy! A nice robot Sony Aibo ERS-7" src="/images/Aciou-Robot-Sony-Aibo-ERS-7.jpg">
+</p>
+
+Tout ce que j'ai pu accomplir depuis 2008, c'est **uniquement grâce à Dieu**.
+Il me donne chaque jour la force de me lever, de me dépasser, et de continuer à avancer, quoiqu'il arrive.
+
+<p class="image-container">
+  <img class="aciou-image" alt="Verset Jérémy 9.11 : Car je ne connais les projets que j'ai formé sur vous dit l'Eternel, projets de paix et non de malheur, afin de vous donner un avenir rempli d'espérance." src="/images/Bible-Jemerie-9-11-Promesse-Dieu-Projets-Paix-Assurance.jpg">
 </p>
