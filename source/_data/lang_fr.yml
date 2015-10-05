@@ -1,12 +1,12 @@
 home:
-  url: "/fr"
   hero:
     subtitle: "De la Terre à l'espace, en 5 projets de robots volants autonomes."
     current-step: "Projet en cours"
     step: "Étape"
   landing-row:
-    title: "Bonjour et bienvenue !"
-    about: "Je m'appelle Arnaud Lenglet, je suis un passionné d'espace et de robotique. Ce blog est dédié à la création de ma propre fusée autonome. Vous pourrez suivre mes progrès au travers des publications ci-dessous, et en apprendre plus sur ce blog et moi <a href='/about'>sur cette page</a>. Enjoy!"
+    title: "Salut et bienvenue !"
+    about: "Ici Arnaud Lenglet, développeur passionné de robotique spatiale. Ce blog est dédié à mon projet de création d'une fusée autonome ! Je partagerai avec vous mes progrès dans les billets ci-dessous. Remarques/commentaires sont les bienvenus. Bonne visite !"
+    about-link: "Découvrir les origines du projet &rarr;"
   article-list:
     header: "Les news des projets robotiques"
     subtitle: "Conception, crash tests, réussites, échecs et autres réjouissances."

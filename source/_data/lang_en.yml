@@ -1,5 +1,4 @@
 home:
-  url: "/en"
   hero:
     subtitle: "From Earth to space with 5 autonomous flying robots."
     current-step: "Current project"
