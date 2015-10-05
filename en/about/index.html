@@ -9,13 +9,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Developing the Mission Control Center software - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
+  <title>About this blog - Flying Robot Projects | From Earth to space with 5 autonomous flying robots.</title>
   <meta name="author" content="Arnaud Lenglet">
 
   
   
-  <meta name="description" content="While working on the Telemetry Streaming System (TSS), I realised I was in need of something more. I don&rsquo;t only need a software to receive and store &hellip;">
-  <meta name="keywords" content="api development ruby rails emberjs robots robotics">
+  <meta name="description" content="Flying Robot Projects | From Earth to space with 5 autonomous flying robots: balloon, zeppelin, plane, drone and rocket. I'm Arnaud Lenglet and you can follow &hellip;">
+  
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software">
+  <link rel="canonical" href="http://flying-robot-projects.net/en/about">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Flying Robot Projects" type="application/atom+xml">
@@ -66,7 +66,7 @@
 </head>
   <body>
     <div class="page-header-banner">
-  <h1>Developing the Mission Control Center software</h1>
+  <h1>About this blog</h1>
 </div>
 
 <article role="article" class="full-single-article">
@@ -82,6 +82,8 @@
           <span class="language-selector">
             
           </span>
+          <a href="/en">Home</a> > About this blog
+          <br>
           written by Arnaud Lenglet 
 
 
@@ -95,100 +97,58 @@
 
 
 
-<time datetime="2015-08-07T22:33:20+02:00" pubdate data-updated="true"></time>
-          <br>
-          
-
-in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/balloon/'>balloon</a>, <a class='category' href='/blog/categories/drone/'>drone</a>, <a class='category' href='/blog/categories/plane/'>plane</a>, <a class='category' href='/blog/categories/rocket/'>rocket</a>, <a class='category' href='/blog/categories/zeppelin/'>zeppelin</a>
-  
-</span>
-
-
+<time datetime="2015-07-08T22:28:00+02:00" pubdate data-updated="true"></time>
         </div>
 
-        <p>While working on the <a href="/blog/2015/07/30/telemetry-streaming-system-tss-design">Telemetry Streaming System (TSS)</a>, I realised I was in need of something more. I don&rsquo;t only need a software to receive and store telemetry data ; but I need a more global system, which would allow me <strong>to monitor the whole flight</strong>.
-From the lift-off until the final landing (or crash&hellip;) through various in-flight milestones and operations, I need something like a flight tower control.</p>
+        <p><img class="about-profile-image" alt="Arnaud Lenglet - Robotics and space enthusiast" src="/images/Arnaud Lenglet GitHub.jpeg"></p>
 
-<p>In fact, space agencies call this the <strong>Mission Control Center</strong>.</p>
+<p>Hi! So you want to know more about this blog? Glad to ear that! This blog was created in 2015. Its first purpose is to help me to shape one of my dreams: <strong>the creation my own autonomous rocket</strong>.</p>
 
-<!-- more -->
+<p>Because it&rsquo;s a huge challenge, which would take a lot of time and efforts, I decided to monitor my progress, writing down here where I&rsquo;ve managed to get, and to share my experiences. You can see this blog as a logbook and a motivational tool. :)</p>
 
-
-
-
-<p class="image center">
-  <img src="/images/2015/08/Main-Control-Room-ESA-Space-Operations-Centre.jpg" alt="The European Space Agency (ESA) Space Operations Centre">
+<p class="image-container">
+  <img class="logbook-image" alt="Logbook image" src="/images/Pilot-logbooks-600x399.jpg">
 </p>
 
 
-<p>In my case, I won&rsquo;t have to build a huge high-tech room, and filling it up with shiny computers and smart guys.
-Rather that, what I precisely need is a software capable of:</p>
+<h2>Why creating flying robots?</h2>
 
-<ol>
-<li>Monitor the robot (balloon, zeppelin, plane, drone of rocket) on the launch pad</li>
-<li>Supervise and run the launch sequence through its successive stages until lift-off</li>
-<li>Monitor the flying robot during the accomplishment of its in flight missions</li>
-<li>Receive and send data from and to the flying machine</li>
-<li>Localize the robot once landed</li>
-</ol>
+<p>Flying things are great, right? And robots are awesome. So flying robots must be - of course - amazing! Pure logic.
+Another reason? Because flying things are <strong>waaaaaay</strong> much fun and exciting than walking, rolling, crawling ones. And where is excitement, is the power to move mountains!</p>
 
+<h2>Why a rocket ?</h2>
 
-<p>Because this Mission Control Center is not precisely part of my future rocket, I neglected it until now&hellip; whereas it&rsquo;s definitely a requirement for every flight!
-How did I missed it?!</p>
+<p>As a well known and pretty cool guy once said:</p>
 
-<p class="image center">
-  <img src="/images/2015/08/sheldon-cooper.gif" alt="Sheldon Cooper says no">
-</p>
+<div class="twitter-card-container">
+  <blockquote class="twitter-tweet" lang="fr"><p lang="en" dir="ltr">Rocket lift off is definitely the coolest, most impressive and most exciting tech event to see on this planet! <a href="https://twitter.com/hashtag/space?src=hash">#space</a> <a href="http://t.co/q9fg58QhJt">pic.twitter.com/q9fg58QhJt</a></p>&mdash; Arnaud Lenglet (@arnlen) <a href="https://twitter.com/arnlen/status/618882520679997445">8 Juillet 2015</a></blockquote>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-<p>This is the good thing with iterations: each iteration helps to determine the next one.</p>
-
-<p>It&rsquo;s so exciting! On this first &ldquo;balloon&rdquo; iteration, I&rsquo;m discovering so many things right now! It&rsquo;s amazing!</p>
-
-<p>Here are a few details of the Mission Control Center software I&rsquo;m actually developing, and what will be under the hood:</p>
-
-<ul>
-<li><strong>An API</strong> developed in Ruby on Rails. This part would do all the core business jobs.</li>
-<li><strong>A frontend</strong> developed in EmberJS. This would be the monitor part, from which I would be able to interact with the flying robot.</li>
-</ul>
-
-
-<p>You can follow the progress of both of these projects on the <a target="_blank" href="https://github.com/flying-robot-projects">GitHub page of the Flying Robot Project organization</a>.</p>
-
-
-        <hr class="divider-short"/>
-
-        
-        <section>
-          <h1>Comments</h1>
-          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <img src="/images/meme/true-story.png">
 </div>
-        </section>
-        
+
+
+<p>(Yes, I know: to quote oneself is totally egocentric&hellip;)</p>
+
+<h2>More about me</h2>
+
+<p>I live in France, near Paris. I quitted in 2015 the employee status to embrace the freelancer one. Since then, I really enjoy the time I get to realise my dreams!</p>
+
+<p>Developer for years, entrepreneur at heart, I love creating and hacking things, learning stuff, participate to innovating and exciting projects, and sharing great talks and experiences with other <em>not-so-crazy</em> passionate guys.
+When it comes to robots - and especially space ones - I can become mad very fast!</p>
+
+<p>Oh! And I have a robotic dog. His name is Aciou.</p>
+
+<p class="image-container">
+  <img class="aciou-image" alt="Here is Aciou, my boy! A nice robot Sony Aibo ERS-7" src="/images/Aciou-Robot-Sony-Aibo-ERS-7.jpg">
+</p>
+
+
+
       </div>
     </div>
   </div>
 </article>
-
-<hr class="divider-short"/>
-
-<div class="archive-link">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        
-
-        
-          <a class="pull-right" href="/en/2015/07/30/telemetry-streaming-system-tss-design/" title="Next Post: Telemetry Streaming System (TSS): design">Next: Telemetry Streaming System (TSS): design &raquo;</a>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
     <footer id="footer" class="her-row">
   <div class="container">
     <div class="row">
@@ -229,8 +189,8 @@ How did I missed it?!</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/';
-        var disqus_url = 'http://flying-robot-projects.net/en/2015/08/07/developing-the-mission-control-center-software/';
+        var disqus_identifier = 'http://flying-robot-projects.net/en/about/index.html';
+        var disqus_url = 'http://flying-robot-projects.net/en/about/index.html';
         var disqus_script = 'embed.js';
       
     (function () {
