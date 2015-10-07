@@ -24,3 +24,5 @@ footer:
 post:
   written-by: "écrit par"
   language-selector: "Read in"
+  previous: "Précédent :"
+  next: "Suivant :"

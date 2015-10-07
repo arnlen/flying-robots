@@ -24,3 +24,5 @@ footer:
 post:
   written-by: "written by"
   language-selector: "Lire en"
+  previous: "Previous:"
+  next: "Next:"
